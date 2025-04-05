@@ -1,12 +1,72 @@
-<section>
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Contact Support</h2>
+    <p class="section-description">For questions or feedback, please use our secure contact form below.</p>
+    
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdi3cR24vUZMm0AMvFd_KJBEJ0O7wFpNKNPBArZWG1JzleDcg/viewform?embedded=true" 
+              width="100%" 
+              height="800" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0"
+              style="border: none; min-height: 600px;"
+              title="76 Games Contact Form">
+        Loading contact form...
+      </iframe>
+    </div>
+    
+    <div class="contact-disclaimer">
+      <p><strong>Note:</strong> This is a secure contact channel. Never share passwords or sensitive information through any form.</p>
+      <p>For direct support, email us at: <a href="mailto:junaidsitenative@gmail.com">junaidsitenative@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    padding: 2rem 0;
+    background: #f8f9fa;
+  }
   
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdi3cR24vUZMm0AMvFd_KJBEJ0O7wFpNKNPBArZWG1JzleDcg/viewform?pli=1" 
-          width="100vw" 
-          height="100vh" 
-          frameborder="0" 
-          style="border: 0; width: 100vw; height: 100vh; display: block;" 
-          marginheight="0" 
-          marginwidth="0">
-    Loading…
-  </iframe>
-  </section>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .section-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .section-description {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+  }
+  
+  .form-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-disclaimer {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    border: 1px solid #eee;
+  }
+  
+  @media (max-width: 768px) {
+    .form-container iframe {
+      min-height: 800px;
+    }
+  }
+</style>
