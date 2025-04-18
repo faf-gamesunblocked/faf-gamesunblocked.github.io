@@ -3,6 +3,14 @@ Custom script
 
 This file will not be overwritten by the updater
 */
+(function() {
+  var script = document.createElement('script');
+  script.src = "https://analytics.ahrefs.com/analytics.js";
+  script.setAttribute("data-key", "VSHMRhCtO2mqqIzel7qJAg");
+  script.async = true;
+  document.head.appendChild(script);
+})();
+
 
 // JavaScript code for search functionality
 function search_animal() {
