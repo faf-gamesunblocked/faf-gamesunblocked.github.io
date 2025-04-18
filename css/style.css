@@ -3,7 +3,7 @@ body {
   color: rgba(225, 225, 225, 0.6);
 }
 body {
-  background-color: #211328;
+  background: url('../images/background1.png')
 }
 body.login-body {
   background-color: #211328;
