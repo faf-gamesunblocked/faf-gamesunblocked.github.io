@@ -1,3 +1,26 @@
+(function() {
+  // Create and append <link rel="dns-prefetch">
+  var link = document.createElement("link");
+  link.rel = "dns-prefetch";
+  link.href = "https://universal.wgplayer.com";
+  document.head.appendChild(link);
+
+  // Create and append the Weegoo script dynamically
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.async = true;
+  script.fetchPriority = 'high';
+  script.src = "https://universal.wgplayer.com/tag/?lh=" +
+    window.location.hostname +
+    "&wp=" + encodeURIComponent(window.location.pathname) +
+    "&ws=" + encodeURIComponent(window.location.search);
+
+  var firstScript = document.getElementsByTagName("script")[0];
+  firstScript.parentNode.insertBefore(script, firstScript);
+})();
+
+
+
 /*
 Custom script
 
