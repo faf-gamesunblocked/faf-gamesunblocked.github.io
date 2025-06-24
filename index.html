@@ -4,6 +4,7 @@
 	<head>
 		
 		<link rel="icon" href="images/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="/css/style.css">
 		
 		<meta charset="utf-8">
 		<meta name="robots" content="index,follow" />
@@ -58,9 +59,10 @@
 </script>
 
 </head>
-	<body id="page-top" style="background: url('../images/background1.png');  background-size: cover;">
+	<body id="page-top" style="background-color:	#666666 !important;  background-size: cover;">
 		<!-- Navigation-->
-		<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
+		<!-- <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
+
 			<div class="container">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -113,10 +115,21 @@
 
 				</div>
 			</div>
-		</nav>		
+		</nav>		 -->
 
 
+<!-- navbar code start from here -->
+<div id="header-container"></div>
 
+<script>
+  fetch("/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-container").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading header:", error));
+</script>
+<!-- navbar code is ended here -->
 
 
 
@@ -145,9 +158,9 @@
 
 
 	<!-- Random games section -->
-  <h1 style="text-align: center;">Unblocked Games 76 – Play Anytime, Anywhere!</h1>
+  <h1 style="text-align: center; color: #ffd369;">Unblocked Games 76 – Play Anytime, Anywhere!</h1>
 
-    <p style="text-align: center;">
+    <p style="text-align: center; color: #CFCFCF;" >
       Welcome to <strong>76 Games</strong>, your best spot for <strong>Unblocked Games 76</strong>! 
       Dive into a massive collection of free, fun games that work perfectly at school, the office, or anywhere else.
       No downloads, no annoying ads—just pure gaming enjoyment. From thrilling action adventures and brain-teasing puzzles
@@ -1388,7 +1401,7 @@
   </div>  <!-- end row grid-container Other Servers -->
 
 
-	          <h2>Unblocked Games 76 – Play Free Games at School & Work!</h2>
+	          <h2> Unblocked Games 76 – Play Free Games at School & Work!</h2>
         <p class="intro">Looking for <strong>unblocked games</strong> that you can play at school, work, or anywhere without restrictions? Welcome to <a href="https://76-games.github.io">76 Games</a>, your ultimate destination for <strong>Unblocked Games 76</strong>, where you can enjoy a huge collection of free games without downloads or blocks!</p>
         <p>Unlike many gaming sites that get blocked by firewalls, <strong>76 Games</strong> offers a vast collection of <strong>free, unblocked games</strong> that work seamlessly on any network. Whether you're a student looking for a quick gaming session between classes or an office worker needing a fun break, our site ensures smooth, lag-free gameplay without annoying restrictions.</p>
     </header>
@@ -1559,17 +1572,28 @@
   </div>
 </div>
 
-	<div class="footer-copyright py-4">
-		<div class="container">
-			<a href="/">Unblocked Games 76</a>			<span class="dsb-panel">
-<a href="/dmca.html">DMCA</a>&nbsp;	</div>
-	</div>
+	
+
+<!-- Footer Load using js -->
+      <div id="footer-container"></div>
+
+<script>
+  fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
+      <!-- Footer load code are ended here -->
+
+
 	<script type="text/javascript" src="js/jquery-3.6.2.min.js"></script>
 	<script type="text/javascript" src="js/lazysizes.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<!-- <script type="text/javascript" src="js/custom.js"></script> -->
 
 
 	
