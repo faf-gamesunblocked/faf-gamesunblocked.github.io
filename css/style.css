@@ -1,7 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: rgba(225, 225, 225, 0.6);
-  background: url('../images/background1.png')
+  /* background: url('../images/background1.png') */
 }
 
 body.login-body {
@@ -40,7 +40,10 @@ a:visited {
   padding: 20px 0;
 }
 .top-nav a {
-  color: #fff;
+  color: #ffd369 !important;
+}
+.top-nav a:hover {
+  color: #FF4C60 !important;
 }
 .nav-link {
   font-weight: 500;
@@ -48,12 +51,45 @@ a:visited {
 .navbar-nav {
   margin-right: 20px;
 }
+/* dropdown list code start*/
 .dropdown-menu {
-  background: #3b3255;
+max-height: 800px !important;       /* Adjust as needed */
+  overflow-y: auto !important;        /* Enable scroll */
+  overflow-x: hidden !important;
+  background: #666666 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+
+  scrollbar-width: auto;              /* Show scrollbar */
+  -ms-overflow-style: auto;
 }
+
+/* Hide scrollbar in Chrome/Safari/Edge */
+.dropdown-menu::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
+
+/* Make dropdown appear properly on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  width: max-content; /* Optional: auto width based on content */
+}
+
+/* dropdown list code is ended here */
+
 .dropdown-menu .dropdown-item {
   padding: 15px 25px;
 }
+.navbar-nav .dropdown li {
+  background-color: #632f2f25 !important;
+} 
 ul.user-links {
   background: #3b3255;
   z-index: 20;
@@ -96,6 +132,9 @@ ul.user-links li {
 .pagination-wrapper {
   margin-top: 20px;
 }
+a{
+  color: #ffd369 !important;
+}
 .pagination .page-link {
   background: #7f598e;
   color: #fff;
@@ -118,7 +157,7 @@ ul.user-links li {
 }
 .section-title {
   margin-bottom: 30px;
-  color: #fff;
+  color: #ffd369;
   font-weight: bold;
 }
 .grid-container {
@@ -135,10 +174,25 @@ ul.user-links li {
   color: rgba(255, 255, 255, 0.5);
 }
 .list-title {
-  color: #fff;
+  color: #ffd369;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+h2,h3,h4{
+  color: #ffd369;
+}
+p{
+  color: #CFCFCF !important;
+}
+.feature-box li{
+  color: #CFCFCF;
+}
+table th{
+  color: #ffd369;
+}
+table td{
+  color: CFCFCF !important;
 }
 .list-category {
   white-space: nowrap;
@@ -777,3 +831,17 @@ input.form-control {
 .gamelist-widget .list-game {
   margin-bottom: 20px;
 }
+
+/* footer image background code is start from here */
+.fag-footer {
+  background: linear-gradient(rgba(47, 79, 57, 0.062) , rgba(0, 0, 0, 0.85)),
+              url('/images/background.png'); /* Replace with your preferred image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* footer image code is ended here */
