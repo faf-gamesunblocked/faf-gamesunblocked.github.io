@@ -1297,18 +1297,18 @@
 	
 </div> <!-- end container -->
 
-		<!-- navbar code start from here -->
-<div id="header-container"></div>
+		<!-- Footer Load using js -->
+      <div id="footer-container"></div>
 
 <script>
-  fetch("/header.html")
+  fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
-      document.getElementById("header-container").innerHTML = data;
+      document.getElementById("footer-container").innerHTML = data;
     })
-    .catch(error => console.error("Error loading header:", error));
+    .catch(error => console.error("Error loading footer:", error));
 </script>
-<!-- navbar code is ended here -->
+      <!-- Footer load code are ended here -->
 
 <script type="text/javascript" src="../js/jquery-3.6.2.min.js"></script>
 	<script type="text/javascript" src="../js/lazysizes.min.js"></script>
