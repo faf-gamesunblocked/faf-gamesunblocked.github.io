@@ -1,202 +1,254 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no" />
-    <title>Privacy Policy</title>
-    <meta name="robots" content="index, follow">  
-    <link rel="icon" href="images/favicon.png" sizes="32x32">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Policy | Github Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    body {
+      padding-top: 70px;
+      background-color: #f4f4f4;
+      color: #222;
+      line-height: 1.6;
+    }
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery-comments.css" /> 
-    <link rel="stylesheet" type="text/css" href="css/user.css" /> 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    .navbar {
+      background-color: #333333;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      white-space: nowrap;
+    }
 
-    <link rel="stylesheet" href="css/bootstrap-icons.css" />
-    <!-- Font Awesome icons (free version)-->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 24px;
+      height: 60px;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
 
+    .nav-left, .nav-middle {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
 
+    .nav-left {
+      margin-right: 20px;
+    }
+
+    .nav-left a {
+      background: none;
+      border: none;
+      color: white;
+      margin-right: 10px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-left .active {
+      background-color: #c0392b;
+    }
+
+    .nav-middle a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 17px;
+      letter-spacing: 1px;
+      padding: 8px;
+      position: relative;
+    }
+
+    .nav-middle a:hover {
+      background-color: #c9c9c9;
+      color: black;
+      border-radius: 8px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333333;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      white-space: nowrap;
+      padding: 15px 10px;
+      min-width: 160px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #c0392b;
+      color: white;
+    }
+
+    .retro, .flash, .games {
+      background-color: #c0392b !important;
+    }
+
+    .retro:hover, .flash:hover, .games:hover {
+      background-color: #c9c9c9 !important;
+      color: black !important;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-container {
+        flex-wrap: wrap;
+      }
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    a {
+      color: #c0392b;
+    }
+
+    /* Footer specific styles */
+    .footer-section a:hover {
+      color: #f75f5f !important;
+      text-decoration: underline !important;
+    }
+    .navbar .navbar-container {
+          justify-content: center;
+        }
+        .last-section {
+  width: 100%;
+  max-width: 1140px; /* Matches Bootstrap's container max-width for large screens */
+  margin-right: auto; 
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding: 2rem;
+  
+} 
+/*  shadow code is start from here */
+.container.last-section {
+  background-color: #f2f2f21a;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.397); /* soft white shadow for dark bg */
+  max-width: 1000px;
+  margin: 0px auto;
+  line-height: 1.7;
+  font-family: Arial, sans-serif;
+}
+.container.last-section h2 {
+  color: #e0e0e0;
+}
+.container.last-section a {
+  color: #ff4c4c;
+  text-decoration: none;
+}
+.container.last-section a:hover {
+  text-decoration: underline;
+}
+  </style>
 </head>
+<body>
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand js-scroll-trigger" href="/"><span class="site-logo" alt="site-logo"><strong> 
-                  <!-- <img src="/assets/images/topvaz_logo.png" alt="topVAZ Games logo" width="70" height="35"> -->
-        Github Games
-        </strong> </span></a>
+ <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+          function updateClock() {
+            const now = new Date();
+            const clock = document.getElementById('clock');
+            if (clock) clock.textContent = now.toLocaleTimeString();
+          }
+          setInterval(updateClock, 1000);
+          updateClock();
+        });
+    </script>
 
-        <div class="navbar-collapse collapse" id="nav-menu">
-          <ul class="navbar-nav">
-          <!--  <li class="nav-item "><a class="nav-link " href="/top-players">Top Players</a></li> -->
+  <div class="content">
+    <h1>Privacy Policy for Github Games</h1>
+    <p>At Github Games, accessible from <a href="https://git-hub-games.github.io">https://git-hub-games.github.io</a>, the privacy of our visitors is extremely important. This Privacy Policy document outlines the types of information that are collected and recorded by Github Games and how we use it.</p>
 
-    
-          </ul>
-                  </div> <!-- end nav-menu -->
-        <div class="d-none d-lg-block" style="padding-left: 10px;">
-          <!-- <a class="nav-link " href="/playroblox">Roblox</a>  -->
-        </div>
-
-        <div class="d-none d-lg-block" style="padding-left: 10px;">
-          <a title="4thofjulybaseball" href="https://git-hub-games.github.io">
-          <img src="images/logo.png" alt="Github Games" width="70" height="35">
-        </div>
-      </a>
-
-
-      </div>
-    </nav>  <!-- end navbar --> 
-</div>
-
-
-
-
-<div class="container">
-
-
-
-
-
-  <div class="content-wrapper">
-    
-  <div style="padding-bottom: 20px"  align="center">
-    </div>
-
-  <div class="row">
-
-      
-
-      <div class="col-md-12">
-              
-
-        <div class="sidebar">
-
-     
-
-          <div class="widget">
-            
-            <div class="row gamelist-widget"> 
-
-                               <h1>Privacy Policy for Github Games</h1>
-    <p class="last-updated">Last Updated: December 18, 2024</p>
-    <p><strong>Effective Immediately</strong></p>
-
-    <h2>1. Data We Collect</h2>
-    <p>We may collect:</p>
+    <h2>1. Information We Collect</h2>
     <ul>
-        <li><strong>Non-personal data</strong>: Cookies, device information (e.g., browser type, IP address).</li>
-        <li><strong>Personal data</strong>: Only if voluntarily provided (e.g., email for newsletters).</li>
-        <li><strong>Location data</strong>: If enabled by users (GPS/Wi-Fi), strictly for functionality (e.g., regional game recommendations).</li>
+      <li><strong>Usage Data:</strong> Your IP, browser, page views, and time spent are collected for analytics.</li>
+      <li><strong>Cookies:</strong> We use cookies to improve functionality and advertising. You can disable them anytime via your browser.</li>
+      <li><strong>Contact Info:</strong> Information you provide through the <a href="/contact.html">Contact Page</a> (e.g., name/email) is used to respond to your queries.</li>
     </ul>
 
-    <h2>2. How We Use Data</h2>
+    <h2>2. How We Use Your Information</h2>
     <ul>
-        <li>To deliver personalized ads (via Google AdSense) based on non-sensitive categories.</li>
-        <li>To improve user experience and analyze traffic (Google Analytics).</li>
-        <li><strong>Never</strong> for interest-based advertising targeting users under <strong>13</strong> (COPPA compliance).</li>
+      <li>To run and maintain the website</li>
+      <li>To personalize content and ads</li>
+      <li>To analyze trends and traffic</li>
+      <li>To respond to emails or messages</li>
     </ul>
 
-    <h2>3. Google AdSense Requirements</h2>
+    <h2>3. Google AdSense</h2>
+    <p>We use Google AdSense. Google and partners may use cookies to personalize ads based on your interests and browsing history. Learn more here: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></p>
+
+    <h2>4. Sharing Your Data</h2>
+    <p>We do not sell or rent personal data. We may share anonymized analytics or comply with legal requests when required.</p>
+
+    <h2>5. Data Rights</h2>
+    <p>To manage ad personalization or data tracking, you can visit:</p>
     <ul>
-        <li>We comply with Google's <strong>Better Ads Standards</strong> (no disruptive ads).</li>
-        <li>We do not place ads on pages with:
-            <ul>
-                <li>Malware, spam, or abusive content.</li>
-                <li>Violations of Google's <strong>Unwanted Software Policy</strong>.</li>
-            </ul>
-        </li>
-        <li><strong>No</strong> ads in sanctioned regions (Crimea, Cuba, Iran, etc.).</li>
+      <li><a href="https://www.aboutads.info/choices/" target="_blank">About Ads Choices</a></li>
+      <li><a href="https://adssettings.google.com/" target="_blank">Google Ad Settings</a></li>
     </ul>
 
-    <h2>4. Children's Privacy (COPPA)</h2>
-    <ul>
-        <li>We <strong>do not knowingly</strong> collect data from users under <strong>13</strong>.</li>
-        <li>Games/content directed at children under 13 <strong>will not</strong> use personalized ads.</li>
-    </ul>
+    <h2>6. Children's Privacy</h2>
+    <p>We do not knowingly collect information from children under 13. If you think we have, contact us immediately to remove it.</p>
 
-    <h2>5. User Rights</h2>
-    <ul>
-        <li><strong>Opt-out</strong>: Disable cookies via browser settings.</li>
-        <li><strong>Data deletion</strong>: Contact us at <a href="mailto:info.jamesborders@gmail.com">info.jamesborders@gmail.com</a>.</li>
-    </ul>
+    <h2>7. Contact Us</h2>
+    <p>If you have questions, contact us at <a href="mailto:alivlogs31eb@gmail.com">alivlogs31eb@gmail.com</a> or visit our <a href="/contact.html">Contact Page</a>.</p>
 
-    <h2>6. Third-Party Disclosures</h2>
-    <p>Data may be shared with:</p>
-    <ul>
-        <li><strong>Google AdSense</strong> (for ad personalization).</li>
-        <li><strong>Analytics providers</strong> (anonymous usage stats).</li>
-    </ul>
-
-
-
-
-
-
-
-
-
-
-
-                      
-              
-            
-            </div>
-          </div> <!-- end widget Popular -->
-
-
-        </div> <!-- end sidebar -->
-
-
-      </div> <!-- end colume col-md-3 -->
-
-  </div> <!-- end row -->
-  
-
-</div> <!-- end content-wrapper -->
-
-
-
-
-
-
-</div> <!-- end container  -->
-
-
-
-  <div class="container">
-    <div class="border-line mt-4"></div>
+    <p><strong>Last Updated:</strong> May 24, 2025</p>
   </div>
-
-
-
-
-  <div class="footer-copyright py-4">
-		<div class="container">
-			<a href="https://git-hub-games.github.io">Unblocked Games</a>			<span class="dsb-panel">
-				 <a href="/term.html">Term</a>&nbsp;- <a href="/dmca.html">DMCA</a>&nbsp;-  <a href="/policy.html">Policy</a>&nbsp; - <a href="/contact.html">Contact</a> </span>
-		</div>
-	</div>
-  <script type="text/javascript" src="js/jquery-3.6.2.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/jquery-comments.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
-  
-
-    </body>
-</html>
-
-
-
-  
