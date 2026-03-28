@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Privacy Policy | Github Games</title>
+  <title>Privacy Policy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
@@ -195,26 +195,23 @@
 </head>
 <body>
 
- <!-- Navbar -->
-    <div id="navbar-placeholder"></div>
+<body id="page-top" style="background-color: #666666; background-size: cover;">
+    <!-- Navbar code start -->
+    <div id="header-container"></div>
+
     <script>
-      fetch('header.html')
+      fetch("/header.html")
         .then(response => response.text())
         .then(data => {
-          document.getElementById('navbar-placeholder').innerHTML = data;
-          function updateClock() {
-            const now = new Date();
-            const clock = document.getElementById('clock');
-            if (clock) clock.textContent = now.toLocaleTimeString();
-          }
-          setInterval(updateClock, 1000);
-          updateClock();
-        });
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading header:", error));
     </script>
+    <!-- Navbar code ends here -->
 
   <div class="content">
-    <h1>Privacy Policy for Github Games</h1>
-    <p>At Github Games, accessible from <a href="https://git-hub-games.github.io">https://git-hub-games.github.io</a>, the privacy of our visitors is extremely important. This Privacy Policy document outlines the types of information that are collected and recorded by Github Games and how we use it.</p>
+    <h1>Privacy Policy for GG</h1>
+    <p>At GG, accessible from <a href="https://git-hub-games.github.io">https://git-hub-games.github.io</a>, the privacy of our visitors is extremely important. This Privacy Policy document outlines the types of information that are collected and recorded by Github Games and how we use it.</p>
 
     <h2>1. Information We Collect</h2>
     <ul>
@@ -250,5 +247,38 @@
     <h2>7. Contact Us</h2>
     <p>If you have questions, contact us at <a href="mailto:info.jamesborders@gmail.com">info.jamesborders@gmail.com</a> or visit our <a href="/contact.html">Contact Page</a>.</p>
 
-    <p><strong>Last Updated:</strong> May 6, 2026</p>
+    <p><strong>Last Updated:</strong> March 28, 2026</p>
   </div>
+    <script>
+      // footer-loader.js
+      document.addEventListener('DOMContentLoaded', function() {
+          // Create a container for the footer
+          const footerContainer = document.createElement('div');
+          footerContainer.id = 'footer-container';
+          document.body.appendChild(footerContainer);
+          
+          // Load the footer content
+          fetch('footer.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.text();
+          })
+          .then(data => {
+              footerContainer.innerHTML = data;
+          })
+              .catch(error => {
+                  console.error('Error loading footer:', error);
+                  // Fallback content if footer fails to load
+                  footerContainer.innerHTML = `
+                      <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+                          <p>© ${new Date().getFullYear()} Github Games. All rights reserved.</p>
+      
+                      </footer>
+                  `;
+              });
+      });
+    </script>
+</body>
+</html>
