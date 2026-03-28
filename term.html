@@ -1,206 +1,366 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no" />
-    <title>Terms At 76 Games </title>
-    <meta name="robots" content="index, follow">  
-    <link rel="icon" href="images/favicon.png" sizes="32x32">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service | Github Games</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery-comments.css" /> 
-    <link rel="stylesheet" type="text/css" href="css/user.css" /> 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
 
-    <link rel="stylesheet" href="css/bootstrap-icons.css" />
-    <!-- Font Awesome icons (free version)-->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    body {
+      padding-top: 60px;
+    }
 
+    .navbar {
+      background-color: #333333;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      white-space: nowrap;
+      overflow: visible;
+    }
 
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 24px;
+      height: 60px;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+
+    .nav-left,
+    .nav-middle {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .nav-left {
+      margin-right: 20px;
+    }
+
+    .nav-left a {
+      background: none;
+      border: none;
+      color: white;
+      margin-right: 10px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-left .active {
+      background-color: #c0392b;
+    }
+
+    .nav-middle a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 17px;
+      letter-spacing: 1px;
+      padding: 8px;
+      position: relative;
+    }
+
+    .nav-middle a:hover {
+      background-color: #c9c9c9;
+      color: black;
+      border-radius: 8px;
+    }
+
+    .retro {
+      background-color: #c0392b !important; 
+    }
+    .retro:hover{
+      background-color: #c9c9c9 !important;
+    }
+    .flash {
+      background-color: #c0392b !important;
+    }
+    .flash:hover{
+      background-color: #c9c9c9 !important;
+    }
+    .games {
+      background-color: #c0392b;
+    }
+
+    .games:hover {
+      background-color: #c9c9c9 !important;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333333;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      white-space: nowrap;
+      padding: 15px 10px;
+      min-width: 160px;
+      max-height: unset;
+      overflow: visible;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .navbar-oneline{
+      display: flex !important;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #c0392b !important;
+      color: white;
+    }
+
+    /* Content Styles */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #a83234;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+
+    p, ul {
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #a83234;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 20px;
+      padding: 0 15px;
+    }
+
+    .footer-section h3 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .footer-section p {
+      color: #ccc;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section li {
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #555;
+      color: #ccc;
+    }
+
+    .footer-section a:hover {
+      color: #f75f5f;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-container {
+        flex-wrap: wrap;
+      }
+    }
+    .navbar .navbar-container {
+          justify-content: center;
+        }
+        .last-section {
+  width: 100%;
+  max-width: 1140px; /* Matches Bootstrap's container max-width for large screens */
+  margin-right: auto; 
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding: 2rem;
+  
+} 
+/*  shadow code is start from here */
+.container.last-section {
+  background-color: #f2f2f21a;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.397); /* soft white shadow for dark bg */
+  max-width: 1000px;
+  margin: 0px auto;
+  line-height: 1.7;
+  font-family: Arial, sans-serif;
+}
+.container.last-section h2 {
+  color: #e0e0e0;
+}
+.container.last-section a {
+  color: #ff4c4c;
+  text-decoration: none;
+}
+.container.last-section a:hover {
+  text-decoration: underline;
+}
+  </style>
 </head>
+<body>
+ <body id="page-top" style="background-color: #666666; background-size: cover;">
+    <!-- Navbar code start -->
+    <div id="header-container"></div>
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand js-scroll-trigger" href="/"><span class="site-logo" alt="site-logo"><strong> 
-                  <!-- <img src="/assets/images/topvaz_logo.png" alt="topVAZ Games logo" width="70" height="35"> -->
-        Unblocked Games 76 
-        </strong> </span></a>
-
-        <div class="navbar-collapse collapse" id="nav-menu">
-          <ul class="navbar-nav">
-          <!--  <li class="nav-item "><a class="nav-link " href="/top-players">Top Players</a></li> -->
-
-    
-          </ul>
-                  </div> <!-- end nav-menu -->
-        <div class="d-none d-lg-block" style="padding-left: 10px;">
-          <!-- <a class="nav-link " href="/playroblox">Roblox</a>  -->
-        </div>
-
-        <div class="d-none d-lg-block" style="padding-left: 10px;">
-          <a title="4thofjulybaseball" href="https://76-games.github.io">
-          <img src="images/logo.png" alt="76 Games" width="70" height="35">
-        </div>
-      </a>
-
-
-      </div>
-    </nav>  <!-- end navbar --> 
-</div>
-
-
-
-
-<div class="container">
-
-
-
-
-
-  <div class="content-wrapper">
-    
-  <div style="padding-bottom: 20px"  align="center">
-    </div>
-
-  <div class="row">
-
-      
-
-      <div class="col-md-12">
-              
-
-        <div class="sidebar">
-
-     
-
-          <div class="widget">
-            
-            <div class="row gamelist-widget"> 
-
-            
-
- <h2>1. Acceptance of Terms</h2>
-        <p>By accessing and using <strong>76-games.github.io</strong> (the "Site"), you agree to comply with these Terms of Use and all applicable laws. If you disagree, you must discontinue use immediately.</p>
-    </section>
-
-    <section>
-        <h2>2. User Responsibilities</h2>
-        <ul>
-            <li>You are solely responsible for your use of the Site and any consequences arising from it.</li>
-            <li>You must not violate any laws, infringe intellectual property rights, or disrupt the Site's functionality.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>3. Third-Party Content & Links</h2>
-        <p>The Site may contain links to third-party websites or ads (e.g., Google AdSense). These are provided for convenience only.</p>
-        <p><strong>We do not endorse or control</strong> third-party content, and we are <strong>not liable</strong> for any damages caused by them.</p>
-    </section>
-
-    <section>
-        <h2>4. User Interactions</h2>
-        <p>If the Site allows user-generated content (e.g., comments, forums), you agree to:</p>
-        <ul>
-            <li>Avoid hate speech, spam, or illegal material.</li>
-            <li>Acknowledge that we <strong>do not monitor</strong> all user content and are <strong>not responsible</strong> for others' actions.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>5. Disclaimer of Warranties</h2>
-        <p>The Site and its content are provided <strong>"as is"</strong> without warranties of any kind.</p>
-        <p>We do <strong>not guarantee</strong> accuracy, reliability, or uninterrupted access to the Site.</p>
-    </section>
-
-    <section>
-        <h2>6. Limitation of Liability</h2>
-        <p><strong>76-games.github.io and its operators</strong> will <strong>not be liable</strong> for:</p>
-        <ul>
-            <li>Direct/indirect damages (e.g., lost profits, data loss).</li>
-            <li>Issues caused by third-party services (e.g., ads, links).</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>7. Intellectual Property</h2>
-        <p>All content (text, images, games, etc.) is protected by <strong>copyright and trademark laws</strong>.</p>
-        <p>You may <strong>not</strong> reproduce, modify, or distribute content without <strong>written permission</strong>.</p>
-    </section>
-
-    <section>
-        <h2>8. Changes to Terms</h2>
-        <p>We may update these terms at any time. Continued use after changes constitutes acceptance.</p>
-    </section>
-
-    <section>
-        <h2>9. Governing Law</h2>
-        <p>These Terms are governed by the laws of the <strong>United States</strong>, without regard to conflict-of-law principles.</p>
-    </section>
-
-    <section>
-        <h2>10. Contact Information</h2>
-        <p>For questions, contact: <a href="mailto:junaidsitenative@gmail.com">junaidsitenative@gmail.com</a>.</p>
-  
-            </div>
-          </div> <!-- end widget Popular -->
-
-
-        </div> <!-- end sidebar -->
-
-
-      </div> <!-- end colume col-md-3 -->
-
-  </div> <!-- end row -->
-  
-
-</div> <!-- end content-wrapper -->
-
-
-
-
-
-
-</div> <!-- end container  -->
-
-
-
+    <script>
+      fetch("/header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading header:", error));
+    </script>
+    <!-- Navbar code ends here -->
+  <!-- Content -->
   <div class="container">
-    <div class="border-line mt-4"></div>
+    <h1>Terms of Service</h1>
+    
+    <h2>1. Acceptance of Terms</h2>
+    <p>Using <a href="https://git-hub-games.github.io">Github Games (GG)</a>, or playing video games on it, means you fully acknowledge, agree, and confirm that you have read all the provided terms and conditions without any objection.</p>
+    <p>It is important to review this page regularly when using our website, as the terms and conditions may be updated from time to time. Checking this page frequently will help you stay informed about any changes.</p>
+    
+    <h2>Third-Party Links</h2>
+    <p>Our website may include links to external websites or services that are not owned or controlled by Github Games. We do not assume responsibility for the content, <a href="https://git-hub-games.github.ioprivacy-policy.html">privacy policy</a>, or practices of any third-party websites. Visiting these sites is at your own risk.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>Github Games (GG) is provided "as is" without warranties of any kind, either express or implied. While we strive to provide a smooth gaming experience, we do not guarantee uninterrupted access, error-free content, or that the website is free from harmful components.</p>
+    <p>In no event shall Github Games or its team be held liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use this website.</p>
+
+    <h2>Changes to These Terms</h2>
+    <p>Github Games reserves the right to update or change these Terms and Conditions at any time without prior notice. It is your responsibility to check this page regularly to stay informed of any updates. Continued use of the website after changes are made will be deemed as your acceptance of those changes.</p>
+    
+    <h2>Contact Us</h2>
+    <p>If you have any questions about these Terms and Conditions, please contact us at:</p> 
+    <p>info.jamesborders@gmail.com</p>
   </div>
-
-
-
-
-  <div class="footer-copyright py-4">
-		<div class="container">
-			<a href="https://76-games.github.io">Unblocked Games 76</a>			<span class="dsb-panel">
-				 <a href="/term.html">Term</a>&nbsp;- <a href="/dmca.html">DMCA</a>&nbsp;-  <a href="/policy.html">Policy</a>&nbsp; - <a href="/contact.html">Contact</a></span>
-		</div>
-	</div>
-  <script type="text/javascript" src="js/jquery-3.6.2.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/jquery-comments.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
-  
-
-    </body>
+    <script>
+      // footer-loader.js
+      document.addEventListener('DOMContentLoaded', function() {
+          // Create a container for the footer
+          const footerContainer = document.createElement('div');
+          footerContainer.id = 'footer-container';
+          document.body.appendChild(footerContainer);
+          
+          // Load the footer content
+          fetch('footer.html')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.text();
+          })
+          .then(data => {
+              footerContainer.innerHTML = data;
+          })
+              .catch(error => {
+                  console.error('Error loading footer:', error);
+                  // Fallback content if footer fails to load
+                  footerContainer.innerHTML = `
+                      <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+                          <p>© ${new Date().getFullYear()} onlygames. All rights reserved.</p>
+      
+                      </footer>
+                  `;
+              });
+      });
+    </script>
+</body>
 </html>
-
-
-
-  
-
-
-
