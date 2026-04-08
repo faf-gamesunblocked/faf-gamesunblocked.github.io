@@ -93,6 +93,22 @@
       margin-bottom: 8px;
     }
   </style>
+		<link rel="dns-prefetch" href="https://universal.wgplayer.com"/>
+
+<script type="text/javascript" async>
+(function(document, url) {
+    var script = document.createElement("script");
+    var firstScript = document.getElementsByTagName("script")[0];
+
+    script.async = true;
+    script.src = url + "?lh=" + window.location.hostname +
+                 "&wp=" + window.location.pathname +
+                 "&ws=" + window.location.search;
+    script.fetchPriority = "high";
+
+    firstScript.parentNode.insertBefore(script, firstScript);
+})(document, "https://universal.wgplayer.com/tag/");
+</script>
 
 </head>
 
