@@ -130,61 +130,6 @@
     googletag.display(interstitialSlot);
   });
 </script>
-		
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-
-<script>
-  window.googletag = window.googletag || { cmd: [] };
-
-  var LeftSideRailSlot, RightSideRailSlot;
-
-  googletag.cmd.push(() => {
-    LeftSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
-    );
-
-    if (LeftSideRailSlot) {
-      LeftSideRailSlot.addService(googletag.pubads());
-    }
-
-    RightSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
-    );
-
-    if (RightSideRailSlot) {
-      RightSideRailSlot.addService(googletag.pubads());
-    }
-
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-
-    if (LeftSideRailSlot) {
-      googletag.display(LeftSideRailSlot);
-    }
-
-    if (RightSideRailSlot) {
-      googletag.display(RightSideRailSlot);
-    }
-  });
-
-  setInterval(function () {
-    var slotsToRefresh = [];
-
-    if (LeftSideRailSlot) {
-      slotsToRefresh.push(LeftSideRailSlot);
-    }
-
-    if (RightSideRailSlot) {
-      slotsToRefresh.push(RightSideRailSlot);
-    }
-
-    if (slotsToRefresh.length > 0) {
-      googletag.pubads().refresh(slotsToRefresh);
-    }
-  }, 30000);
-</script>
 
 </head>
 
@@ -204,31 +149,6 @@
     .catch(error => console.error("Error loading header:", error));
 </script>
 <!-- navbar code is ended here -->	
-<div style="display: flex; justify-content: center;">
- <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-
-<div id="970x250-1">
-  <script>
-    window.googletag = window.googletag || { cmd: [] };
-
-    googletag.cmd.push(function () {
-      googletag
-        .defineSlot(
-          '/21849154601,23300816471/Ad.Plus-970x250',
-          [970, 250],
-          '970x250-1'
-        )
-        .addService(googletag.pubads());
-
-      googletag.enableServices();
-
-      googletag.display('970x250-1');
-    });
-  </script>
-</div>
-  </div>
-</div>
-
 
 <div class="container game-wrapper">
   <div class="row">
@@ -261,7 +181,27 @@
           				<iframe class="game-iframe" id="game-area" src="https://sudoku-online.github.io/a8/8-ball-pool" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
           			</div>
           		</div>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
+<div id="728x90-1">
+  <script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    googletag.cmd.push(function () {
+      googletag
+        .defineSlot(
+          '/21849154601,23300816471/Ad.Plus-728x90',
+          [728, 90],
+          '728x90-1'
+        )
+        .addService(googletag.pubads());
+
+      googletag.enableServices();
+
+      googletag.display('728x90-1');
+    });
+  </script>
+</div>
 
           		<div class="game-info">
           			<div class="header-left">
@@ -284,7 +224,37 @@
       
 
       <div class="col-md-3">
-      
+      <div style="position: sticky; top: 20px;">
+
+  <!-- Big Ad -->
+  <div id="ad-300x600" style="margin-bottom:20px;"></div>
+
+  <!-- Small Ad -->
+  <div id="ad-300x250"></div>
+
+</div>
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
+<div id="300x600-1">
+  <script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    googletag.cmd.push(function () {
+      googletag
+        .defineSlot(
+          '/21849154601,23300816471/Ad.Plus-300x600',
+          [300, 600],
+          '300x600-1'
+        )
+        .addService(googletag.pubads());
+
+      googletag.enableServices();
+
+      googletag.display('300x600-1');
+    });
+  </script>
+</div>
 
             <div align="center">
          
