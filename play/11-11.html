@@ -93,7 +93,14 @@
       margin-bottom: 8px;
     }
   </style>
-		<link rel="dns-prefetch" href="https://universal.wgplayer.com" />
+
+  <link rel="dns-prefetch" href="https://universal.wgplayer.com" />
+
+  <!-- ✅ GPT.js loaded ONCE in HEAD for all ads -->
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+  <script>
+    window.googletag = window.googletag || {cmd: []};
+  </script>
 
 <script type="text/javascript" async>
 (function (e, t) {
@@ -147,17 +154,6 @@
           	<div class="game-container">
           		<div class="game-content" data-id="169">
           			<div id="allow_mobile_version"></div>			
-               <!-- 
-                <div id="mobile-play" style="display: none;">
-          				<div class="mobile-thumb-play">
-          					<img src="#">
-          				</div>
-          				<div id="mobile-play-btn">
-          					<i class="bi bi-play-circle-fill"></i>
-          				</div>
-          			</div> -->
-
-
 
           			<div class="game-iframe-container" id="game-player">
           				<div id="mobile-back-button" draggable="true">
@@ -171,40 +167,68 @@
           		<div class="game-info">
           			<div class="header-left">
           				<h1 class="single-title">11-11</h1>
-
-
           			</div>
           			<div class="header-right">
-
-
           				<div class="b-action2">
-          		
           					<a href="#" onclick="open_fullscreen()" class="btn btn-capsule"><i class="bi bi-arrows-fullscreen b-icon"></i>Fullscreen</a>
           				</div>
           			</div>
           		</div>
+
+                    <!-- ✅ 728x90 Ad - Game ke bilkul neeche -->
+                    <div style="text-align:center; margin-top: 15px; margin-bottom: 10px;">
+                      <div id="728x90-1">
+                        <script>
+                          googletag.cmd.push(function() {
+                            googletag.defineSlot('/21849154601,23300816471/Ad.Plus-728x90', [728, 90], '728x90-1').addService(googletag.pubads());
+                            googletag.pubads().enableSingleRequest();
+                            googletag.enableServices();
+                            googletag.display('728x90-1');
+                          });
+                        </script>
+                      </div>
+                    </div>
+                    <!-- ✅ 728x90 Ad END -->
+
           	</div>
 
       </div><!-- end col-9 -->
       
 
+      <!-- ✅ Right Sidebar - col-md-3 with Ads -->
       <div class="col-md-3">
       
-
             <div align="center">
-	 
+
+              <!-- ✅ 300x250 Ad - Right Sidebar Top -->
+              <div id="300x250-1" style="margin-bottom: 15px;">
+                <script>
+                  googletag.cmd.push(function() {
+                    googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x250', [300, 250], '300x250-1').addService(googletag.pubads());
+                    googletag.display('300x250-1');
+                  });
+                </script>
+              </div>
+              <!-- ✅ 300x250 Ad END -->
+
+              <!-- ✅ 300x600 Ad - Right Sidebar Below -->
+              <div id="300x600-1" style="margin-top: 15px;">
+                <script>
+                  googletag.cmd.push(function() {
+                    googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x600', [300, 600], '300x600-1').addService(googletag.pubads());
+                    googletag.display('300x600-1');
+                  });
+                </script>
+              </div>
+              <!-- ✅ 300x600 Ad END -->
 
         </div>
       
-
 
   </div><!-- end row -->
 
 
 </div> <!-- end row container game-wrapper-->
-
-
-
 
 
 	<div class="content-wrapper">
@@ -213,21 +237,8 @@
 
 			<div class="col-md-5">
 				<div class="sidebar">
-	
-
-
-
-
-
-
-
-
-
-
 
 </div>			
-
-
 
 </div>
 </div>
@@ -239,27 +250,6 @@
 		<div class="bottom-container">
 		<h2 class="item-title">You might also Like</h2>
 		<div class="row">
-
-<!-- 
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/10-minutes-till-dawn.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/10-minutes-till-dawn.png" data-src="https://sudoku-online.github.io/img/10-minutes-till-dawn.png" class="lazyload" alt="10 Minutes Till Dawn"></div>
-      <div class="list-info">
-        <div class="list-title">10 Minutes Till Dawn</div>
-      </div>
-    </div>
-  </div>
-  </a>
-</div>  
-
- -->
-
-
-
-
 
 
 <div class="col-lg-2 col-md-4 col-6 grid-3">
@@ -669,47 +659,16 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div> <!-- end row You might also Like -->
-	
-
-
-
-
-
-
 
 
 </div> <!-- end container -->
-
-
-
-
-
-
 
 
   <!-- Popular games section -->
   <h3 class="section-title">Popular games</h3>
   <div class="row grid-container">
   
-
-
-
 
   <div class="col-lg-4 col-md-6 grid-2">
     <a href="/play/slope.html">
@@ -719,8 +678,6 @@
         <div class="list-info">
           <div class="list-title">Slope</div>
           <div class="list-category">Running</div>
-    
-
         </div>
       </div>
     </div>
@@ -736,8 +693,6 @@
         <div class="list-info">
           <div class="list-title">Stack</div>
           <div class="list-category">Skill</div>
-    
-
         </div>
       </div>
     </div>
@@ -753,8 +708,6 @@
         <div class="list-info">
           <div class="list-title">Stack Ball</div>
           <div class="list-category">Jumping</div>
-    
-
         </div>
       </div>
     </div>
@@ -770,8 +723,6 @@
         <div class="list-info">
           <div class="list-title">Tiny Fishing</div>
           <div class="list-category">Sports</div>
-    
-
         </div>
       </div>
     </div>
@@ -787,8 +738,6 @@
         <div class="list-info">
           <div class="list-title">Smash Karts</div>
           <div class="list-category">Action</div>
-    
-
         </div>
       </div>
     </div>
@@ -803,8 +752,6 @@
         <div class="list-info">
           <div class="list-title">Getaway Shootout</div>
           <div class="list-category">Action</div>
-    
-
         </div>
       </div>
     </div>
@@ -820,8 +767,6 @@
         <div class="list-info">
           <div class="list-title">The Impossible Quiz</div>
           <div class="list-category">Thinking</div>
-    
-
         </div>
       </div>
     </div>
@@ -837,8 +782,6 @@
         <div class="list-info">
           <div class="list-title">Rooftop Snipers 2</div>
           <div class="list-category">Action</div>
-    
-
         </div>
       </div>
     </div>
@@ -854,8 +797,6 @@
         <div class="list-info">
           <div class="list-title">We Become What We Behold</div>
           <div class="list-category">Adventure</div>
-    
-
         </div>
       </div>
     </div>
@@ -871,8 +812,6 @@
         <div class="list-info">
           <div class="list-title">House Of Hazards</div>
           <div class="list-category">Skill</div>
-    
-
         </div>
       </div>
     </div>
@@ -888,8 +827,6 @@
         <div class="list-info">
           <div class="list-title">Master Chess</div>
           <div class="list-category">Thinking</div>
-    
-
         </div>
       </div>
     </div>
@@ -905,8 +842,6 @@
         <div class="list-info">
           <div class="list-title">Football Legends</div>
           <div class="list-category">Sports</div>
-    
-
         </div>
       </div>
     </div>
@@ -922,8 +857,6 @@
         <div class="list-info">
           <div class="list-title">Rocket Soccer Derby</div>
           <div class="list-category">Sports</div>
-    
-
         </div>
       </div>
     </div>
@@ -939,17 +872,13 @@
         <div class="list-info">
           <div class="list-title">Big Shot Boxing</div>
           <div class="list-category">Sports</div>
-    
-
         </div>
       </div>
     </div>
     </a>
   </div>  
 
-</div> <!-- end Poplular -->
-
-
+</div> <!-- end Popular -->
 
 
 			<!-- Footer Load using js -->
@@ -972,10 +901,6 @@
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-<!-- 	<script type="text/javascript" src="js/custom.js"></script> -->
 	
 	  </body>
 </html>
-
-
-
