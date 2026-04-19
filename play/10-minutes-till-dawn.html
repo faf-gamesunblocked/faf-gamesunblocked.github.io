@@ -112,26 +112,21 @@
     "&ws=" + window.location.search
 );
 </script>
-		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+<!-- Ads -->
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 <script>
-  window.googletag = window.googletag || { cmd: [] };
+window.googletag = window.googletag || { cmd: [] };
 
-  googletag.cmd.push(function () {
-    var interstitialSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Interstitial',
-      googletag.enums.OutOfPageFormat.INTERSTITIAL
-    );
+googletag.cmd.push(function () {
 
-    if (interstitialSlot) {
-      interstitialSlot.addService(googletag.pubads());
-    }
+  googletag.defineSlot('/21849154601/728x90', [728,90], '728x90-1').addService(googletag.pubads());
+  googletag.defineSlot('/21849154601/300x600', [300,600], '300x600-1').addService(googletag.pubads());
+  googletag.defineSlot('/21849154601/300x250', [300,250], 'ad-300x250').addService(googletag.pubads());
 
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-
-    googletag.display(interstitialSlot);
-  });
+  googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+});
 </script>
 </head>
 
@@ -208,7 +203,7 @@
       </div><!-- end col-9 -->
       <div style="display: flex; justify-content: center;"
 
-<div id="970x250-1">
+	<div id="970x250-1">
   <script>
     window.googletag = window.googletag || { cmd: [] };
 
@@ -231,8 +226,8 @@
 </div>
 
 
-      <div class="col-md-3">
-      
+    <!-- SIDEBAR -->
+<div class="col-md-3">
 
 <div id="300x600-1"></div>
 <div id="ad-300x250"></div>
@@ -248,6 +243,7 @@ googletag.cmd.push(function () {
 
 </div>
 </div>
+
 
             <div align="center">
  
