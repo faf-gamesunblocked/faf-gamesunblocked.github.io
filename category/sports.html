@@ -50,6 +50,82 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
+<script>
+  window.googletag = window.googletag || { cmd: [] };
+
+  googletag.cmd.push(function () {
+    var interstitialSlot = googletag.defineOutOfPageSlot(
+      '/21849154601,23300816471/Ad.Plus-Interstitial',
+      googletag.enums.OutOfPageFormat.INTERSTITIAL
+    );
+
+    if (interstitialSlot) {
+      interstitialSlot.addService(googletag.pubads());
+    }
+
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+
+    googletag.display(interstitialSlot);
+  });
+</script>
+
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
+<script>
+  window.googletag = window.googletag || { cmd: [] };
+
+  var LeftSideRailSlot, RightSideRailSlot;
+
+  googletag.cmd.push(() => {
+    LeftSideRailSlot = googletag.defineOutOfPageSlot(
+      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
+      googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
+    );
+
+    if (LeftSideRailSlot) {
+      LeftSideRailSlot.addService(googletag.pubads());
+    }
+
+    RightSideRailSlot = googletag.defineOutOfPageSlot(
+      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
+      googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
+    );
+
+    if (RightSideRailSlot) {
+      RightSideRailSlot.addService(googletag.pubads());
+    }
+
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+
+    if (LeftSideRailSlot) {
+      googletag.display(LeftSideRailSlot);
+    }
+
+    if (RightSideRailSlot) {
+      googletag.display(RightSideRailSlot);
+    }
+  });
+
+  setInterval(function () {
+    var slotsToRefresh = [];
+
+    if (LeftSideRailSlot) {
+      slotsToRefresh.push(LeftSideRailSlot);
+    }
+
+    if (RightSideRailSlot) {
+      slotsToRefresh.push(RightSideRailSlot);
+    }
+
+    if (slotsToRefresh.length > 0) {
+      googletag.pubads().refresh(slotsToRefresh);
+    }
+  }, 30000);
+</script>
 
 </head>
 
@@ -71,17 +147,27 @@
 
 
 <div style="display: flex; justify-content: center;">
-  <div>
-    <script>
-      atOptions = {
-        'key' : '19b6049e3f35b959fd985326ac1a2208',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/19b6049e3f35b959fd985326ac1a2208/invoke.js"></script>
+ <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
+<div id="970x250-1">
+  <script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    googletag.cmd.push(function () {
+      googletag
+        .defineSlot(
+          '/21849154601,23300816471/Ad.Plus-970x250',
+          [970, 250],
+          '970x250-1'
+        )
+        .addService(googletag.pubads());
+
+      googletag.enableServices();
+
+      googletag.display('970x250-1');
+    });
+  </script>
+</div>
   </div>
 </div>
 
