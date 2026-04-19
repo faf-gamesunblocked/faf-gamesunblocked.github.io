@@ -807,7 +807,20 @@
 
 </div> <!-- end container -->
 
+<!-- ✅ RIGHT SIDE FLOATING AD -->
+<div style="position: fixed; right: 10px; top: 100px; z-index: 999;">
+  <div id="ad-right-300x600"></div>
+</div>
 
+<script>
+  window.googletag = window.googletag || { cmd: [] };
+
+  googletag.cmd.push(function () {
+    googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x600', [300, 600], 'ad-right-300x600')
+      .addService(googletag.pubads());
+    googletag.display('ad-right-300x600');
+  });
+</script>
 
 
 
