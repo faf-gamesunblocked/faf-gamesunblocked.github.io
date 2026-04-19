@@ -143,6 +143,25 @@ googletag.cmd.push(function () {
     .catch(error => console.error("Error loading header:", error));
 </script>
 <!-- navbar code is ended here -->	
+		<div id="970x250-1">
+  <script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    googletag.cmd.push(function () {
+      googletag
+        .defineSlot(
+          '/21849154601,23300816471/Ad.Plus-970x250',
+          [970, 250],
+          '970x250-1'
+        )
+        .addService(googletag.pubads());
+
+      googletag.enableServices();
+
+      googletag.display('970x250-1');
+    });
+  </script>
+</div>
 
 <div class="container game-wrapper">
   <div class="row">
@@ -279,27 +298,6 @@ googletag.cmd.push(function () {
 </div>
 </div>
 </div>
-
-<div id="728x90-1">
-  <script>
-    window.googletag = window.googletag || { cmd: [] };
-
-    googletag.cmd.push(function () {
-      googletag
-        .defineSlot(
-          '/21849154601,23300816471/Ad.Plus-728x90',
-          [728, 90],
-          '728x90-1'
-        )
-        .addService(googletag.pubads());
-
-      googletag.enableServices();
-
-      googletag.display('728x90-1');
-    });
-  </script>
-</div>
-
 
 	<div class="bottom-container">
 		<h2 class="item-title">You might also Like</h2>
