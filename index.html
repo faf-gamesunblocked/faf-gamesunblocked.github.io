@@ -20,9 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-    <!-- Font Awesome icons (free version) -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -59,564 +57,522 @@
     </script>
     <link rel="manifest" href="https://76-games.github.io/js/manifest.json">
     <meta name="outreachist-site-verification" content="0502fb117c72fc8823f34e86f109fdd2">
-    <link rel="dns-prefetch" href="https://universal.wgplayer.com"/><script type="text/javascript" async>!function(e,t){a=e.createElement("script"),m=e.getElementsByTagName("script")[0],a.async=1,a.src=t,a.fetchPriority='high',m.parentNode.insertBefore(a,m)}(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);</script>
-  <script src="https://analytics.ahrefs.com/analytics.js" data-key="cL9VoI/9Dq/sxyRbEKftPw" async></script>
-  <script async 
-    src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" 
-    crossorigin="anonymous">
-</script>
 
-<script>
-    window.googletag = window.googletag || { cmd: [] };
+    <!-- ============================================
+         AD SCRIPTS — HEAD SECTION
+         ============================================ -->
 
-    googletag.cmd.push(function () {
+    <!-- GPT.js (ek baar load, sab ke liye) -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
+    <!-- 1. INTERSTITIAL AD (page load par dikhta hai) -->
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      googletag.cmd.push(function () {
         var interstitialSlot = googletag.defineOutOfPageSlot(
-            '/21849154601,23300816471/Ad.Plus-Interstitial',
-            googletag.enums.OutOfPageFormat.INTERSTITIAL
+          '/21849154601,23300816471/Ad.Plus-Interstitial',
+          googletag.enums.OutOfPageFormat.INTERSTITIAL
         );
-
         if (interstitialSlot) {
-            interstitialSlot.addService(googletag.pubads());
+          interstitialSlot.addService(googletag.pubads());
         }
-
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
-
         googletag.display(interstitialSlot);
-    });
-</script>
+      });
+    </script>
 
-    <script async 
-    src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" 
-    crossorigin="anonymous">
-</script>
+    <!-- 2. TOP ANCHOR AD (page ke upar sticky banner) -->
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      var anchorSlot;
+      googletag.cmd.push(function () {
+        anchorSlot = googletag.defineOutOfPageSlot(
+          '/21849154601,23300816471/Ad.Plus-Anchor-Small',
+          googletag.enums.OutOfPageFormat.TOP_ANCHOR
+        );
+        if (anchorSlot) {
+          anchorSlot.addService(googletag.pubads());
+        }
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        if (anchorSlot) {
+          googletag.display(anchorSlot);
+        }
+      });
+      setInterval(function () {
+        if (anchorSlot) { googletag.pubads().refresh([anchorSlot]); }
+      }, 30000);
+    </script>
 
-<script>
-    window.googletag = window.googletag || { cmd: [] };
-
-    var LeftSideRailSlot, RightSideRailSlot;
-
-    googletag.cmd.push(() => {
+    <!-- 3. SIDE RAIL ADS (desktop par left & right — high CPM) -->
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      var LeftSideRailSlot, RightSideRailSlot;
+      googletag.cmd.push(function () {
         LeftSideRailSlot = googletag.defineOutOfPageSlot(
-            '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-            googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
+          '/21849154601,23300816471/Ad.Plus-Side-Anchor',
+          googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
         );
         LeftSideRailSlot.addService(googletag.pubads());
 
         RightSideRailSlot = googletag.defineOutOfPageSlot(
-            '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-            googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
+          '/21849154601,23300816471/Ad.Plus-Side-Anchor',
+          googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
         );
         RightSideRailSlot.addService(googletag.pubads());
 
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
-
         googletag.display(LeftSideRailSlot);
         googletag.display(RightSideRailSlot);
-    });
-
-    setInterval(function () {
+      });
+      setInterval(function () {
         googletag.pubads().refresh([LeftSideRailSlot, RightSideRailSlot]);
-    }, 30000);
-</script>
-    <script>
-  window.googletag = window.googletag || { cmd: [] };
+      }, 30000);
+    </script>
 
-  var anchorSlot;
+    <!-- Ahrefs Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="cL9VoI/9Dq/sxyRbEKftPw" async></script>
 
-  googletag.cmd.push(function () {
-    anchorSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Anchor-Small',
-      googletag.enums.OutOfPageFormat.TOP_ANCHOR
-    );
+    <!-- WG Player (Ad.Plus player) -->
+    <link rel="dns-prefetch" href="https://universal.wgplayer.com"/>
+    <script type="text/javascript" async>
+      !function(e,t){a=e.createElement("script"),m=e.getElementsByTagName("script")[0],a.async=1,a.src=t,a.fetchPriority='high',m.parentNode.insertBefore(a,m)}(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);
+    </script>
 
-    if (anchorSlot) {
-      anchorSlot.addService(googletag.pubads());
-    }
-
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-
-    if (anchorSlot) {
-      googletag.display(anchorSlot);
-    }
-  });
-
-  setInterval(function () {
-    if (anchorSlot) {
-      googletag.pubads().refresh([anchorSlot]);
-    }
-  }, 30000);
-</script>
   </head>
 
   <body id="page-top" style="background-color: #666666; background-size: cover;">
-    <!-- Navbar code start -->
-    <div id="header-container"></div>
 
+    <!-- Navbar -->
+    <div id="header-container"></div>
     <script>
       fetch("/header.html")
         .then(response => response.text())
-        .then(data => {
-          document.getElementById("header-container").innerHTML = data;
-        })
+        .then(data => { document.getElementById("header-container").innerHTML = data; })
         .catch(error => console.error("Error loading header:", error));
     </script>
-    <!-- Navbar code ends here -->
 
     <div class="container game-wrapper">
       <div class="row">
-        <div class="banner-ad-wrapper">
-          <div class="banner-ad-wrapper">
-            <div class="banner-ad-content" style="padding: 20px; text-align: center;">
-              <div align="center"></div>
-            </div>
+        <!-- ============================================
+             4. TOP BANNER AD — 970x250 (games se pehle, sabse zyada viewable position)
+             ============================================ -->
+        <div class="banner-ad-wrapper" style="width:100%; text-align:center; margin-bottom:15px;">
+          <div id="970x250-1">
+            <script>
+              window.googletag = window.googletag || { cmd: [] };
+              googletag.cmd.push(function () {
+                googletag.defineSlot('/21849154601,23300816471/Ad.Plus-970x250', [970, 250], '970x250-1')
+                  .addService(googletag.pubads());
+                googletag.enableServices();
+                googletag.display('970x250-1');
+              });
+            </script>
           </div>
         </div>
+
         <div class="text-center">
           <h1 style="font-size: 30px; font-weight: bold; color: #ffd369;">Unblocked Github Games – Play Anytime, Anywhere!</h1>
           <p style="font-size: 14px">
             Welcome to GG (Github Games), your best spot for <a href="https://git-hub-games.github.io/">Unblocked Games premium</a>! Dive into a massive collection of free, fun games that work perfectly at school, the office, or anywhere else. No downloads, just pure gaming enjoyment. From thrilling action adventures and brain-teasing puzzles to classic arcade hits, we've got it all. Start playing now and turn any downtime into game time! 🎮 <a href="#">Browse All Games</a>
           </p>
         </div>
-        
-
       </div>
-         <script async 
-    src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" 
-    crossorigin="anonymous">
-</script>
 
-<div id="970x250-1">
-    <script>
-        window.googletag = window.googletag || { cmd: [] };
-
-        googletag.cmd.push(function () {
-            googletag
-                .defineSlot(
-                    '/21849154601,23300816471/Ad.Plus-970x250',
-                    [970, 250],
-                    '970x250-1'
-                )
-                .addService(googletag.pubads());
-
-            googletag.enableServices();
-
-            googletag.display('970x250-1');
-        });
-    </script>
-</div>
-
+      <!-- ============================================
+           5. INPAGE VIDEO / OUTSTREAM AD
+           (content ke beech mein — sabse zyada CPM deta hai)
+           ============================================ -->
+      <div style="text-align:center; margin: 10px 0 20px;">
+        <script async src="https://cdn.ad.plus/player/adplus.js"></script>
+        <script data-playerPro="current">
+          (function(){
+            var s=document.querySelector('script[data-playerPro="current"]');
+            s.removeAttribute("data-playerPro");
+            (playerPro=window.playerPro||[]).push({
+              id:"z2I717k6zq5b",
+              after:s,
+              appParams:{"C_NETWORK_CODE":"23300816471","C_WEBSITE":"git-hub-games.github.io"}
+            });
+          })();
+        </script>
+      </div>
 
       <h2 class="section-title">New Games</h2>
       <hr>
+
       <div class="row grid-container">
-        <!-- Game Items Start Here -->
+        <!-- ===== GAME ITEMS ===== -->
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/football-masters">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/football-masters.png" class="lazyload" alt="Football Masters" title="Football Masters">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">Football Masters</div>
-                  <div class="list-category">Strategy | Puzzle</div>
-                </div>
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/football-masters.png" class="lazyload" alt="Football Masters" title="Football Masters"></div>
+              <div class="list-info"><div class="list-title">Football Masters</div><div class="list-category">Strategy | Puzzle</div></div>
+            </div></div>
           </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/awesome-tanks-2">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/awesome-tanks-2.png" class="lazyload" alt="Awesome Tanks 2" title="Awesome Tanks 2">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">Awesome Tanks 2</div>
-                  <div class="list-category">Action</div>
-                </div>    
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/awesome-tanks-2.png" class="lazyload" alt="Awesome Tanks 2" title="Awesome Tanks 2"></div>
+              <div class="list-info"><div class="list-title">Awesome Tanks 2</div><div class="list-category">Action</div></div>
+            </div></div>
           </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/n-gon">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/n-gon.png" class="lazyload" alt="N Gon" title="N-Gon">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">N-Gon</div>
-                  <div class="list-category">Arcade</div>
-                </div>
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/n-gon.png" class="lazyload" alt="N Gon" title="N-Gon"></div>
+              <div class="list-info"><div class="list-title">N-Gon</div><div class="list-category">Arcade</div></div>
+            </div></div>
           </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/jumping-shell">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/jumping-shell.png" class="lazyload" alt="Jumping Shell" title="Jumping Shell">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">Jumping Shell</div>
-                  <div class="list-category">Puzzle Platformer</div>
-                </div>
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/jumping-shell.png" class="lazyload" alt="Jumping Shell" title="Jumping Shell"></div>
+              <div class="list-info"><div class="list-title">Jumping Shell</div><div class="list-category">Puzzle Platformer</div></div>
+            </div></div>
           </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/blumgi-slime">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/blumgi-slime.png" class="lazyload" alt="Blumgi Slime" title="Blumgi Slime">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">Blumgi Slime</div>
-                  <div class="list-category">Platformer</div>
-                </div>
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/blumgi-slime.png" class="lazyload" alt="Blumgi Slime" title="Blumgi Slime"></div>
+              <div class="list-info"><div class="list-title">Blumgi Slime</div><div class="list-category">Platformer</div></div>
+            </div></div>
           </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/bitlife">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/bitlife.png" class="lazyload" alt="Bitlife" title="Bitlife">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">Bitlife</div>
-                  <div class="list-category">Life Simulation</div>
-                </div>
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/bitlife.png" class="lazyload" alt="Bitlife" title="Bitlife"></div>
+              <div class="list-info"><div class="list-title">Bitlife</div><div class="list-category">Life Simulation</div></div>
+            </div></div>
           </a>
+        </div>
+
+        <!-- ============================================
+             6. MID-GRID AD — 300x250
+             (games ke beech mein — high viewability)
+             ============================================ -->
+        <div class="col-lg-2 col-md-4 col-6 grid-3" style="display:flex; align-items:center; justify-content:center;">
+          <div id="300x250-1">
+            <script>
+              window.googletag = window.googletag || { cmd: [] };
+              googletag.cmd.push(function () {
+                googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x250', [300, 250], '300x250-1')
+                  .addService(googletag.pubads());
+                googletag.enableServices();
+                googletag.display('300x250-1');
+              });
+            </script>
+          </div>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/gold-digger-frvr">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/gold-digger-frvr.png" class="lazyload" alt="Gold Digger Frvr" title="Gold Digger Frvr">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">Gold Digger FRVR</div>
-                  <div class="list-category">Mining/Arcade</div>
-                </div>
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/gold-digger-frvr.png" class="lazyload" alt="Gold Digger Frvr" title="Gold Digger Frvr"></div>
+              <div class="list-info"><div class="list-title">Gold Digger FRVR</div><div class="list-category">Mining/Arcade</div></div>
+            </div></div>
           </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/temple-run-2">
-            <div class="game-item">
-              <div class="list-game">
-                <div class="list-thumbnail">
-                  <img src="https://sudoku-online.github.io/img/temple-run-2.png" class="lazyload" alt="Temple Run 2" title="Temple Run 2">
-                </div>
-                <div class="list-info">
-                  <div class="list-title">Temple Run 2</div>
-                  <div class="list-category">Endless Runner</div>
-                </div>
-              </div>
-            </div>
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/temple-run-2.png" class="lazyload" alt="Temple Run 2" title="Temple Run 2"></div>
+              <div class="list-info"><div class="list-title">Temple Run 2</div><div class="list-category">Endless Runner</div></div>
+            </div></div>
           </a>
         </div>
-        <div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/chicken-merge.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/chicken-merge.png" data-src="https://sudoku-online.github.io/img/chicken-merge.png" class="lazyload" alt="Chicken Merge"></div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/tunnel-rush.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/tunnel-rush.png" data-src="https://sudoku-online.github.io/img/tunnel-rush.png" class="lazyload" alt="Tunnel Rush"></div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/tiny-fishing.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/tiny-fishing.png" data-src="https://sudoku-online.github.io/img/tiny-fishing.png" class="lazyload" alt="Tiny Fishing"></div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/moto-road-rash-3d.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/moto-road-rash-3d.png" data-src="https://sudoku-online.github.io/img/moto-road-rash-3d.png" class="lazyload" alt="Moto Road Rash 3D"></div>
-    </div>
-  </div>
-  </a>
-</div>
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/water-color-sort.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/water-color-sort.png" data-src="https://sudoku-online.github.io/img/water-color-sort.png" class="lazyload" alt="Water Color Sort"></div>
-    </div>
-  </div>
-  </a>
-</div>
-      
-
-
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/merge-round-racers.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/merge-round-racers.png" data-src="https://sudoku-online.github.io/img/merge-round-racers.png" class="lazyload" alt="Merge Round Racers"></div>
-    </div>
-  </div>
-  </a>
-</div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/subway-surfers-newyork.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/subway-surfers-newyork.png" data-src="https://sudoku-online.github.io/img/subway-surfers-newyork.png" class="lazyload" alt="Subway Surfers Newyork"></div>
-    </div>
-  </div>
-  </a>
-</div>
+          <a href="/play/chicken-merge.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/chicken-merge.png" class="lazyload" alt="Chicken Merge"></div>
+            </div></div>
+          </a>
+        </div>
 
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/tunnel-rush.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/tunnel-rush.png" class="lazyload" alt="Tunnel Rush"></div>
+            </div></div>
+          </a>
+        </div>
 
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/stickman-school-run.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/stickman-school-run.png" data-src="https://sudoku-online.github.io/img/stickman-school-run.png" class="lazyload" alt="Stickman School Run"></div>
-    </div>
-  </div>
-  </a>
-</div>
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/geometry-dash.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/geometry-dash.png" data-src="https://sudoku-online.github.io/img/geometry-dash.png" class="lazyload" alt="Geometry Dash"></div>
-    </div>
-  </div>
-  </a>
-</div>
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/tiny-fishing.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/tiny-fishing.png" class="lazyload" alt="Tiny Fishing"></div>
+            </div></div>
+          </a>
+        </div>
 
+        <!-- ============================================
+             7. SECOND MID-GRID AD — 300x250 (second instance, unique ID)
+             ============================================ -->
+        <div class="col-lg-2 col-md-4 col-6 grid-3" style="display:flex; align-items:center; justify-content:center;">
+          <div id="300x250-2">
+            <script>
+              window.googletag = window.googletag || { cmd: [] };
+              googletag.cmd.push(function () {
+                googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x250', [300, 250], '300x250-2')
+                  .addService(googletag.pubads());
+                googletag.enableServices();
+                googletag.display('300x250-2');
+              });
+            </script>
+          </div>
+        </div>
 
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/color-tunnel-2.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/color-tunnel-2.png" data-src="https://sudoku-online.github.io/img/color-tunnel-2.png" class="lazyload" alt="Color Tunnel 2"></div>
-    </div>
-  </div>
-  </a>
-</div>
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/moto-road-rash-3d.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/moto-road-rash-3d.png" class="lazyload" alt="Moto Road Rash 3D"></div>
+            </div></div>
+          </a>
+        </div>
 
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/water-color-sort.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/water-color-sort.png" class="lazyload" alt="Water Color Sort"></div>
+            </div></div>
+          </a>
+        </div>
 
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/subway-surfers-beijing.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/subway-surfers-beijing.png" data-src="https://sudoku-online.github.io/img/subway-surfers-beijing.png" class="lazyload" alt="Subway Surfers Beijing"></div>
-    </div>
-  </div>
-  </a>
-</div>
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/merge-round-racers.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/merge-round-racers.png" class="lazyload" alt="Merge Round Racers"></div>
+            </div></div>
+          </a>
+        </div>
 
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/subway-surfers-newyork.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/subway-surfers-newyork.png" class="lazyload" alt="Subway Surfers Newyork"></div>
+            </div></div>
+          </a>
+        </div>
 
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/electron-dash.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/electron-dash.png" data-src="https://sudoku-online.github.io/img/electron-dash.png" class="lazyload" alt="Electron Dash"></div>
-    </div>
-  </div>
-  </a>
-</div>
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/stickman-school-run.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/stickman-school-run.png" class="lazyload" alt="Stickman School Run"></div>
+            </div></div>
+          </a>
+        </div>
 
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/geometry-dash.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/geometry-dash.png" class="lazyload" alt="Geometry Dash"></div>
+            </div></div>
+          </a>
+        </div>
 
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/athletics-hero.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/athletics-hero.png" data-src="https://sudoku-online.github.io/img/athletics-hero.png" class="lazyload" alt="Athletics Hero"></div>
-    </div>
-  </div>
-  </a>
-</div>
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/color-tunnel-2.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/color-tunnel-2.png" class="lazyload" alt="Color Tunnel 2"></div>
+            </div></div>
+          </a>
+        </div>
 
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/subway-surfers-beijing.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/subway-surfers-beijing.png" class="lazyload" alt="Subway Surfers Beijing"></div>
+            </div></div>
+          </a>
+        </div>
 
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/two-ball-3d-dark.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/two-ball-3d-dark.png" data-src="https://sudoku-online.github.io/img/two-ball-3d-dark.png" class="lazyload" alt="Two Ball 3d Dark"></div>
-    </div>
-  </div>
-  </a>
-</div>
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/electron-dash.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/electron-dash.png" class="lazyload" alt="Electron Dash"></div>
+            </div></div>
+          </a>
+        </div>
 
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/athletics-hero.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/athletics-hero.png" class="lazyload" alt="Athletics Hero"></div>
+            </div></div>
+          </a>
+        </div>
 
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/play/temple-run-2.html">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/temple-run-2.png" data-src="https://sudoku-online.github.io/img/temple-run-2.png" class="lazyload" alt="Temple Run 2"></div>
-    </div>
-  </div>
-  </a>
-</div>
-        <!-- Add More Game Items similarly -->
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/two-ball-3d-dark.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/two-ball-3d-dark.png" class="lazyload" alt="Two Ball 3d Dark"></div>
+            </div></div>
+          </a>
+        </div>
 
-      </div>
-    </div>
+        <div class="col-lg-2 col-md-4 col-6 grid-3">
+          <a href="/play/temple-run-2.html">
+            <div class="game-item"><div class="list-game">
+              <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/temple-run-2.png" class="lazyload" alt="Temple Run 2"></div>
+            </div></div>
+          </a>
+        </div>
 
-<div id="970x250-2">
-    <script>
-        window.googletag = window.googletag || { cmd: [] };
+      </div><!-- end grid-container -->
 
-        googletag.cmd.push(function () {
-            googletag
-                .defineSlot(
-                    '/21849154601,23300816471/Ad.Plus-970x250',
-                    [970, 250],
-                    '970x250-2'
-                )
+      <!-- ============================================
+           8. POST-GAMES BANNER AD — 970x250
+           (games dekhne ke baad scroll karne par)
+           ============================================ -->
+      <div style="text-align:center; margin: 20px 0;">
+        <div id="970x250-2">
+          <script>
+            window.googletag = window.googletag || { cmd: [] };
+            googletag.cmd.push(function () {
+              googletag.defineSlot('/21849154601,23300816471/Ad.Plus-970x250', [970, 250], '970x250-2')
                 .addService(googletag.pubads());
-
-            googletag.enableServices();
-
-            googletag.display('970x250-2');
-        });
-    </script>
-</div>
-
-  <!-- Your Content Below the Games -->
-    <h2>Unblocked Games Github – Play Free Games at School & Work!</h2>
-    <p class="intro">
-      Looking for <strong>unblocked games</strong> that you can enjoy at school, work, or anywhere without limitations?
-      Welcome to <a href="https://git-hub-games.github.io/">Github Games</a>, your go-to source for
-      <strong>Unblocked Games Github </strong>. Explore a wide range of free games that are accessible without downloads or network blocks!
-    </p>
-    <p>
-      Unlike other gaming sites that often get blocked by school or office firewalls,
-      <strong>GG</strong> gives you unlimited access to a large collection of
-      <strong>free unblocked games</strong>. Whether you're a student taking a break or an employee enjoying some downtime,
-      our site delivers smooth, lag-free gameplay without any annoying restrictions.
-    </p>
-
-    <section>
-      <h2>Why Choose Unblocked Games on GG (Github Games)?</h2>
-
-      <div class="feature-box">
-        <h3>Instant Access</h3>
-        <p>
-          Most gaming websites require downloads or registrations, but with <strong>Github Games</strong>, you can start playing instantly.
-          <strong>No sign-ups, no payments, and no waiting!</strong> Just visit the platform, choose your game, and play right away.
-        </p>
+              googletag.enableServices();
+              googletag.display('970x250-2');
+            });
+          </script>
+        </div>
       </div>
 
-      <div class="feature-box">
-        <h3>No Downloads – Just Click & Play!</h3>
-        <ul>
-          <li><strong>School/Work Friendly</strong> – Effortlessly bypass network blocks.</li>
-          <li><strong>Mobile & PC Compatible</strong> – Enjoy gaming on smartphones, tablets, laptops, or desktops.</li>
-          <li><strong>No Lag, Fast Loading</strong> – Designed for smooth gameplay, even on slower internet.</li>
-        </ul>
+      <!-- ===== CONTENT SECTION ===== -->
+      <h2>Unblocked Games Github – Play Free Games at School &amp; Work!</h2>
+      <p class="intro">
+        Looking for <strong>unblocked games</strong> that you can enjoy at school, work, or anywhere without limitations?
+        Welcome to <a href="https://git-hub-games.github.io/">Github Games</a>, your go-to source for
+        <strong>Unblocked Games Github</strong>. Explore a wide range of free games that are accessible without downloads or network blocks!
+      </p>
+      <p>
+        Unlike other gaming sites that often get blocked by school or office firewalls,
+        <strong>GG</strong> gives you unlimited access to a large collection of
+        <strong>free unblocked games</strong>. Whether you're a student taking a break or an employee enjoying some downtime,
+        our site delivers smooth, lag-free gameplay without any annoying restrictions.
+      </p>
+
+      <!-- ============================================
+           9. IN-CONTENT AD — 728x90 (between content paragraphs)
+           ============================================ -->
+      <div style="text-align:center; margin: 20px 0;">
+        <div id="728x90-1">
+          <script>
+            window.googletag = window.googletag || { cmd: [] };
+            googletag.cmd.push(function () {
+              googletag.defineSlot('/21849154601,23300816471/Ad.Plus-728x90', [728, 90], '728x90-1')
+                .addService(googletag.pubads());
+              googletag.enableServices();
+              googletag.display('728x90-1');
+            });
+          </script>
+        </div>
       </div>
 
-      <div class="feature-box">
-        <h3>Huge Collection of Games</h3>
-        <p>
-          Whether you love <strong>action games</strong> or <strong>puzzle challenges</strong>, <strong>Github Games (GG)</strong> has you covered.
-          We update our library regularly, ensuring you always find the latest and most exciting <strong>Unblocked Games Github </strong>.
-        </p>
+      <section>
+        <h2>Why Choose Unblocked Games on GG (Github Games)?</h2>
+
+        <div class="feature-box">
+          <h3>Instant Access</h3>
+          <p>
+            Most gaming websites require downloads or registrations, but with <strong>Github Games</strong>, you can start playing instantly.
+            <strong>No sign-ups, no payments, and no waiting!</strong> Just visit the platform, choose your game, and play right away.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <h3>No Downloads – Just Click &amp; Play!</h3>
+          <ul>
+            <li><strong>School/Work Friendly</strong> – Effortlessly bypass network blocks.</li>
+            <li><strong>Mobile &amp; PC Compatible</strong> – Enjoy gaming on smartphones, tablets, laptops, or desktops.</li>
+            <li><strong>No Lag, Fast Loading</strong> – Designed for smooth gameplay, even on slower internet.</li>
+          </ul>
+        </div>
+
+        <!-- ============================================
+             10. IN-CONTENT AD — 300x250 (third instance)
+             ============================================ -->
+        <div style="float:right; margin: 0 0 15px 20px;">
+          <div id="300x250-3">
+            <script>
+              window.googletag = window.googletag || { cmd: [] };
+              googletag.cmd.push(function () {
+                googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x250', [300, 250], '300x250-3')
+                  .addService(googletag.pubads());
+                googletag.enableServices();
+                googletag.display('300x250-3');
+              });
+            </script>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <h3>Huge Collection of Games</h3>
+          <p>
+            Whether you love <strong>action games</strong> or <strong>puzzle challenges</strong>, <strong>Github Games (GG)</strong> has you covered.
+            We update our library regularly, ensuring you always find the latest and most exciting <strong>Unblocked Games Github</strong>.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <h3>Safe &amp; Secure Gaming</h3>
+          <p>
+            Forget shady websites full of pop-ups and malware. <strong>Github Games (GG)</strong> offers a
+            <strong>clean, ad-free, and secure gaming experience</strong> you can trust.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Why Github Games is Better Than Other Unblocked Game Sites?</h2>
+        <table>
+          <tr><th>Feature</th><th>Github Games</th><th>Other Sites</th></tr>
+          <tr style="color:#CFCFCF;"><td>No Ads</td><td class="checkmark">✅ Yes</td><td class="x-mark">❌ Often filled with pop-ups</td></tr>
+          <tr style="color:#CFCFCF;"><td>No Downloads</td><td class="checkmark">✅ Play instantly</td><td class="x-mark">❌ Some require installs</td></tr>
+          <tr style="color:#CFCFCF;"><td>Works at School/Work</td><td class="checkmark">✅ Unblocked</td><td class="x-mark">❌ Often restricted</td></tr>
+          <tr style="color:#CFCFCF;"><td>Huge Game Selection</td><td class="checkmark">✅ 100+ games</td><td class="x-mark">❌ Limited choices</td></tr>
+        </table>
+      </section>
+
+      <!-- ============================================
+           11. BOTTOM BANNER AD — 970x250 (page ke end mein)
+           ============================================ -->
+      <div style="text-align:center; margin: 30px 0 10px;">
+        <div id="970x250-3">
+          <script>
+            window.googletag = window.googletag || { cmd: [] };
+            googletag.cmd.push(function () {
+              googletag.defineSlot('/21849154601,23300816471/Ad.Plus-970x250', [970, 250], '970x250-3')
+                .addService(googletag.pubads());
+              googletag.enableServices();
+              googletag.display('970x250-3');
+            });
+          </script>
+        </div>
       </div>
 
-      <div class="feature-box">
-        <h3>Safe & Secure Gaming</h3>
-        <p>
-          Forget shady websites full of pop-ups and malware. <strong>Github Games (GG)</strong> offers a
-          <strong>clean, ad-free, and secure gaming experience</strong> you can trust.
-        </p>
-      </div>
-    </section>
+    </div><!-- end container -->
 
-    <section>
-      <h2>Why Github Games is Better Than Other Unblocked Game Sites?</h2>
-      <table>
-        <tr>
-          <th>Feature</th>
-          <th>Github Games</th>
-          <th>Other Sites</th>
-        </tr>
-        <tr style="color:#CFCFCF;">
-          <td>No Ads</td>
-          <td class="checkmark">✅ Yes</td>
-          <td class="x-mark">❌ Often filled with pop-ups</td>
-        </tr>
-        <tr style="color:#CFCFCF;">
-          <td>No Downloads</td>
-          <td class="checkmark">✅ Play instantly</td>
-          <td class="x-mark">❌ Some require installs</td>
-        </tr>
-        <tr style="color:#CFCFCF;">
-          <td>Works at School/Work</td>
-          <td class="checkmark">✅ Unblocked</td>
-          <td class="x-mark">❌ Often restricted</td>
-        </tr>
-        <tr style="color:#CFCFCF;">
-          <td>Huge Game Selection</td>
-          <td class="checkmark">✅ 100+ games</td>
-          <td class="x-mark">❌ Limited choices</td>
-        </tr>
-      </table>
-    </section>
-  </div>
-    <!-- Footer Load using js -->
+    <!-- Footer -->
     <div id="footer-container"></div>
-
     <script>
       fetch("/footer.html")
         .then(response => response.text())
-        .then(data => {
-          document.getElementById("footer-container").innerHTML = data;
-        })
+        .then(data => { document.getElementById("footer-container").innerHTML = data; })
         .catch(error => console.error("Error loading footer:", error));
     </script>
 
