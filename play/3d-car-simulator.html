@@ -38,18 +38,17 @@
     (function(e,t){var a=e.createElement("script"),m=e.getElementsByTagName("script")[0];a.async=true;a.src=t;a.fetchPriority="high";m.parentNode.insertBefore(a,m);})(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);
   </script>
 
-  <!-- Report Modal CSS -->
   <style>
     .report-modal { display:none; position:fixed; z-index:20; padding-top:100px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4); }
     .report-modal-content { background-color:#fefefe; color:#000; margin:auto; padding:20px; border:1px solid #888; max-width:320px; }
     .close { color:#aaaaaa; float:right; font-size:28px; font-weight:bold; }
     .close:hover, .close:focus { color:black; text-decoration:none; cursor:pointer; }
     .report-label { padding:0 10px; margin-right:5px; border-radius:15px; display:inline-block; margin-bottom:8px; }
-    /* Sidebar ad sticky */
     .sidebar-ad-sticky { position: sticky; top: 80px; }
+    /* Ad divs ko hide mat hone do */
+    .ad-slot-wrap { display:block !important; visibility:visible !important; }
   </style>
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/jquery-comments.css" />
   <link rel="stylesheet" href="../css/user.css" />
@@ -61,118 +60,121 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- ================================================
-       GPT.js — SIRF EK BAAR
-       ================================================ -->
+  <!-- =============================================
+       GPT.js — SIRF EK BAAR LOAD
+       ============================================= -->
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
-  <!-- ================================================
-       SAARE ADS EK HI BLOCK MEIN DEFINE
-       ================================================ -->
+  <!-- =============================================
+       SAARE ADS EK HI CMD BLOCK MEIN
+       — collapseEmptyDivs NAHI lagaya (warna hide ho jate)
+       — enableLazyLoad lagaya (fast load ke liye)
+       ============================================= -->
   <script>
     window.googletag = window.googletag || { cmd: [] };
 
     googletag.cmd.push(function () {
 
-      // --- OUT-OF-PAGE SLOTS ---
+      // ---- OUT-OF-PAGE (koi div nahi chahiye) ----
 
-      // 1. Interstitial (page load par)
       var interstitialSlot = googletag.defineOutOfPageSlot(
         '/21849154601,23300816471/Ad.Plus-Interstitial',
         googletag.enums.OutOfPageFormat.INTERSTITIAL
       );
       if (interstitialSlot) interstitialSlot.addService(googletag.pubads());
 
-      // 2. Top Anchor (upar sticky)
       var anchorSlot = googletag.defineOutOfPageSlot(
         '/21849154601,23300816471/Ad.Plus-Anchor-Small',
         googletag.enums.OutOfPageFormat.TOP_ANCHOR
       );
       if (anchorSlot) anchorSlot.addService(googletag.pubads());
 
-      // 3. Left Side Rail
       var leftRail = googletag.defineOutOfPageSlot(
         '/21849154601,23300816471/Ad.Plus-Side-Anchor',
         googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
       );
       if (leftRail) leftRail.addService(googletag.pubads());
 
-      // 4. Right Side Rail
       var rightRail = googletag.defineOutOfPageSlot(
         '/21849154601,23300816471/Ad.Plus-Side-Anchor',
         googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
       );
       if (rightRail) rightRail.addService(googletag.pubads());
 
-      // --- DISPLAY SLOTS ---
+      // ---- DISPLAY SLOTS ----
 
-      // 5. Sidebar top — 300x600 (game ke saath dikhta hai, high CPM)
+      // Sidebar 300x600 — game ke saath (highest CPM on game pages)
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-300x600',
         [[300, 600], [300, 250]],
-        'slot-sidebar-300x600'
+        'gpt-sidebar-top'
       ).addService(googletag.pubads());
 
-      // 6. Sidebar bottom — 300x250 (sidebar mein doosra ad)
+      // Sidebar 300x250 — neeche
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-300x250',
-        [[300, 250], [250, 250]],
-        'slot-sidebar-300x250'
+        [[300, 250]],
+        'gpt-sidebar-bottom'
       ).addService(googletag.pubads());
 
-      // 7. Below game — 970x250 (game khatam hone ke baad)
+      // Game ke neeche — 970x250
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-970x250',
         [[970, 250], [728, 90], [320, 50]],
-        'slot-below-game-970x250'
+        'gpt-below-game'
       ).addService(googletag.pubads());
 
-      // 8. "You might also like" ke beech — 728x90
+      // "You might like" se pehle — 728x90
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-728x90',
         [[728, 90], [320, 50]],
-        'slot-728x90-1'
+        'gpt-leaderboard-1'
       ).addService(googletag.pubads());
 
-      // 9. "You might also like" ke andar — 300x250
+      // Games grid ke andar — 300x250 (#1)
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-300x250',
-        [[300, 250], [250, 250]],
-        'slot-grid-300x250-1'
+        [[300, 250]],
+        'gpt-grid-mid-1'
       ).addService(googletag.pubads());
 
-      // 10. Popular games ke beech — 300x250
+      // Popular games ke andar — 300x250 (#2)
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-300x250',
-        [[300, 250], [250, 250]],
-        'slot-grid-300x250-2'
+        [[300, 250]],
+        'gpt-grid-mid-2'
       ).addService(googletag.pubads());
 
-      // 11. Bottom banner — 970x250
+      // Page bottom — 970x250
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-970x250',
         [[970, 250], [728, 90], [320, 50]],
-        'slot-bottom-970x250'
+        'gpt-bottom-banner'
       ).addService(googletag.pubads());
 
-      // --- SERVICES ENABLE (SIRF EK BAAR) ---
+      // ---- SERVICES — EK BAAR ----
       googletag.pubads().enableSingleRequest();
-      googletag.pubads().collapseEmptyDivs();
+      // NOTE: collapseEmptyDivs() NAHI — warna test mein ads gayab hote hain
+      googletag.pubads().enableLazyLoad({
+        fetchMarginPercent: 100,
+        renderMarginPercent: 50,
+        mobileScaling: 1.0
+      });
       googletag.enableServices();
 
-      // --- DISPLAY CALLS ---
+      // ---- DISPLAY CALLS ----
       if (interstitialSlot) googletag.display(interstitialSlot);
       if (anchorSlot)       googletag.display(anchorSlot);
       if (leftRail)         googletag.display(leftRail);
       if (rightRail)        googletag.display(rightRail);
 
-      googletag.display('slot-sidebar-300x600');
-      googletag.display('slot-sidebar-300x250');
-      googletag.display('slot-below-game-970x250');
-      googletag.display('slot-728x90-1');
-      googletag.display('slot-grid-300x250-1');
-      googletag.display('slot-grid-300x250-2');
-      googletag.display('slot-bottom-970x250');
+      googletag.display('gpt-sidebar-top');
+      googletag.display('gpt-sidebar-bottom');
+      googletag.display('gpt-below-game');
+      googletag.display('gpt-leaderboard-1');
+      googletag.display('gpt-grid-mid-1');
+      googletag.display('gpt-grid-mid-2');
+      googletag.display('gpt-bottom-banner');
     });
   </script>
 
@@ -191,7 +193,7 @@
   <div class="container game-wrapper">
     <div class="row">
 
-      <!-- ====== GAME AREA (col-9) ====== -->
+      <!-- ===== GAME AREA col-9 ===== -->
       <div class="col-md-9">
         <div class="game-container">
           <div class="game-content" data-id="169">
@@ -221,15 +223,19 @@
         </div>
       </div><!-- end col-9 -->
 
-      <!-- ====== SIDEBAR (col-3) — AD PLACEMENT ====== -->
+      <!-- ===== SIDEBAR col-3 — ADS ===== -->
       <div class="col-md-3">
         <div class="sidebar-ad-sticky" style="text-align:center;">
 
-          <!-- AD #1: Sidebar 300x600 (game ke saath, sticky — sabse zyada CPM) -->
-          <div id="slot-sidebar-300x600" style="min-height:250px; min-width:300px; margin-bottom:15px;"></div>
+          <!-- AD 1: 300x600 sticky sidebar (sabse zyada CPM) -->
+          <div class="ad-slot-wrap" style="margin-bottom:15px;">
+            <div id="gpt-sidebar-top" style="width:300px; min-height:250px; display:inline-block;"></div>
+          </div>
 
-          <!-- AD #2: Sidebar 300x250 (scroll hone par dikh'ta hai) -->
-          <div id="slot-sidebar-300x250" style="min-height:250px; min-width:300px;"></div>
+          <!-- AD 2: 300x250 sidebar bottom -->
+          <div class="ad-slot-wrap">
+            <div id="gpt-sidebar-bottom" style="width:300px; min-height:250px; display:inline-block;"></div>
+          </div>
 
         </div>
       </div><!-- end col-3 -->
@@ -237,8 +243,8 @@
     </div><!-- end row -->
   </div><!-- end game-wrapper -->
 
-  <!-- ====== AD #3: INPAGE VIDEO OUTSTREAM (game ke neeche, high CPM) ====== -->
-  <div class="container" style="text-align:center; margin: 15px auto;">
+  <!-- AD 3: InPage Video/Outstream — game ke neeche (high CPM) -->
+  <div class="container" style="text-align:center; margin:15px auto;">
     <script async src="https://cdn.ad.plus/player/adplus.js"></script>
     <script data-playerPro="current">
       (function(){
@@ -253,26 +259,24 @@
     </script>
   </div>
 
-  <!-- ====== AD #4: BELOW GAME BANNER 970x250 ====== -->
-  <div class="container" style="text-align:center; margin: 10px auto 20px;">
-    <div id="slot-below-game-970x250" style="min-height:90px;"></div>
+  <!-- AD 4: 970x250 below game -->
+  <div class="container ad-slot-wrap" style="text-align:center; margin:10px auto 20px;">
+    <div id="gpt-below-game" style="min-height:90px; display:inline-block;"></div>
   </div>
 
   <div class="container">
     <div class="content-wrapper">
       <div class="row">
-        <div class="col-md-5">
-          <div class="sidebar"></div>
-        </div>
+        <div class="col-md-5"><div class="sidebar"></div></div>
       </div>
     </div>
 
     <div class="bottom-container">
       <h2 class="item-title">You might also Like</h2>
 
-      <!-- ====== AD #5: LEADERBOARD 728x90 (games se pehle) ====== -->
-      <div style="text-align:center; margin-bottom:15px;">
-        <div id="slot-728x90-1" style="min-height:50px;"></div>
+      <!-- AD 5: 728x90 leaderboard — games se pehle -->
+      <div class="ad-slot-wrap" style="text-align:center; margin-bottom:15px;">
+        <div id="gpt-leaderboard-1" style="min-height:50px; display:inline-block;"></div>
       </div>
 
       <div class="row">
@@ -282,40 +286,35 @@
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/n-gon.png" class="lazyload" alt="N Gon"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/house-of-hazards.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/house-of-hazards.png" class="lazyload" alt="House Of Hazards"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/red-ball-4.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/red-ball-4.png" class="lazyload" alt="Red Ball 4"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/crazy-cars.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/crazy-cars.png" class="lazyload" alt="Crazy Cars"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/merge-round-racers.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/merge-round-racers.png" class="lazyload" alt="Merge Round Racers"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/moto-road-rash-3d.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/moto-road-rash-3d.png" class="lazyload" alt="Moto Road Rash 3D"></div>
           </div></div></a>
         </div>
 
-        <!-- ====== AD #6: GRID AD 300x250 (games ke beech) ====== -->
-        <div class="col-lg-2 col-md-4 col-6 grid-3" style="display:flex;align-items:center;justify-content:center;padding:5px;">
-          <div id="slot-grid-300x250-1" style="min-height:250px; min-width:300px;"></div>
+        <!-- AD 6: 300x250 — games grid ke beech -->
+        <div class="col-lg-2 col-md-4 col-6 grid-3 ad-slot-wrap" style="display:flex;align-items:center;justify-content:center;padding:5px;">
+          <div id="gpt-grid-mid-1" style="width:300px; min-height:250px; display:inline-block;"></div>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 grid-3">
@@ -323,191 +322,161 @@
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/tag.png" class="lazyload" alt="Tag"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/smash-karts.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/smash-karts.png" class="lazyload" alt="Smash Karts"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/murder.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/murder.png" class="lazyload" alt="Murder"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/water-color-sort.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/water-color-sort.png" class="lazyload" alt="Water Color Sort"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/top-speed-racing-3d.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/top-speed-racing-3d.png" class="lazyload" alt="Top Speed Racing 3d"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/idle-ants.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/idle-ants.png" class="lazyload" alt="Idle Ants"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/merge-cyber-racers.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/merge-cyber-racers.png" class="lazyload" alt="Merge Cyber Racers"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/brain-test-tricky-puzzles.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/brain-test-tricky-puzzles.png" class="lazyload" alt="Brain Test: Tricky Puzzles"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/sausage-flip.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/sausage-flip.png" class="lazyload" alt="Sausage Flip"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/pop-it-master.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/pop-it-master.png" class="lazyload" alt="Pop It Master"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/tunnel-rush.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/tunnel-rush.png" class="lazyload" alt="Tunnel Rush"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/subway-surfers-newyork.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/subway-surfers-newyork.png" class="lazyload" alt="Subway Surfers Newyork"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/blumgi-slime.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/blumgi-slime.png" class="lazyload" alt="Blumgi Slime"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/soccer-skills-champions-league.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/soccer-skills-champions-league.png" class="lazyload" alt="Soccer Skills Champions League"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/stack-ball.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/stack-ball.png" class="lazyload" alt="Stack Ball"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/dreadhead-parkour.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/dreadhead-parkour.png" class="lazyload" alt="Dreadhead Parkour"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/idle-digging-tycoon.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/idle-digging-tycoon.png" class="lazyload" alt="Idle Digging Tycoon"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/madalin-stunt-cars-2.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/madalin-stunt-cars-2.png" class="lazyload" alt="Madalin Stunt Cars 2"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/football-masters.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/football-masters.png" class="lazyload" alt="Football Masters"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/soccer-skills-world-cup.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/soccer-skills-world-cup.png" class="lazyload" alt="Soccer Skills World Cup"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/stickman-bike.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/stickman-bike.png" class="lazyload" alt="Stickman Bike"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/8-ball-pool.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/8-ball-pool.png" class="lazyload" alt="8 Ball Pool"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/master-chess.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/master-chess.png" class="lazyload" alt="Master Chess"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/gobble.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/gobble.png" class="lazyload" alt="Gobble"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/we-become-what-we-behold.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/we-become-what-we-behold.png" class="lazyload" alt="We Become What We Behold"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/gold-digger-frvr.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/gold-digger-frvr.png" class="lazyload" alt="Gold Digger Frvr"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/rocket-soccer-derby.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/rocket-soccer-derby.png" class="lazyload" alt="Rocket Soccer Derby"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/the-impossible-quiz.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/the-impossible-quiz.png" class="lazyload" alt="The Impossible Quiz"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/temple-of-boom.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/temple-of-boom.png" class="lazyload" alt="Temple Of Boom"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/blumgi-ball.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/blumgi-ball.png" class="lazyload" alt="Blumgi Ball"></div>
           </div></div></a>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/jumping-shell.html"><div class="game-item"><div class="list-game">
             <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/jumping-shell.png" class="lazyload" alt="Jumping Shell"></div>
           </div></div></a>
         </div>
 
-      </div><!-- end row You might also like -->
+      </div><!-- end You might also like row -->
     </div><!-- end bottom-container -->
 
-    <!-- ====== Popular Games ====== -->
+    <!-- Popular Games -->
     <h3 class="section-title">Popular games</h3>
     <div class="row grid-container">
 
@@ -517,35 +486,30 @@
           <div class="list-info"><div class="list-title">Slope</div><div class="list-category">Running</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/stack.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/stack.png" class="small-thumb img-rounded lazyload" alt="Stack"></div>
           <div class="list-info"><div class="list-title">Stack</div><div class="list-category">Skill</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/stack-ball.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/stack-ball.png" class="small-thumb img-rounded lazyload" alt="Stack Ball"></div>
           <div class="list-info"><div class="list-title">Stack Ball</div><div class="list-category">Jumping</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/tiny-fishing.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/tiny-fishing.png" class="small-thumb img-rounded lazyload" alt="Tiny Fishing"></div>
           <div class="list-info"><div class="list-title">Tiny Fishing</div><div class="list-category">Sports</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/smash-karts.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/smash-karts.png" class="small-thumb img-rounded lazyload" alt="Smash Karts"></div>
           <div class="list-info"><div class="list-title">Smash Karts</div><div class="list-category">Action</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/getaway-shootout.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/getaway-shootout.png" class="small-thumb img-rounded lazyload" alt="Getaway Shootout"></div>
@@ -553,9 +517,9 @@
         </div></div></a>
       </div>
 
-      <!-- ====== AD #7: POPULAR GAMES MEIN 300x250 ====== -->
-      <div class="col-lg-4 col-md-6 grid-2" style="display:flex;align-items:center;justify-content:center;padding:5px;">
-        <div id="slot-grid-300x250-2" style="min-height:250px; min-width:300px;"></div>
+      <!-- AD 7: 300x250 — popular games ke beech -->
+      <div class="col-lg-4 col-md-6 grid-2 ad-slot-wrap" style="display:flex;align-items:center;justify-content:center;padding:5px;">
+        <div id="gpt-grid-mid-2" style="width:300px; min-height:250px; display:inline-block;"></div>
       </div>
 
       <div class="col-lg-4 col-md-6 grid-2">
@@ -564,49 +528,42 @@
           <div class="list-info"><div class="list-title">The Impossible Quiz</div><div class="list-category">Thinking</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/rooftop-snipers-2.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/rooftop-snipers-2.png" class="small-thumb img-rounded lazyload" alt="Rooftop Snipers 2"></div>
           <div class="list-info"><div class="list-title">Rooftop Snipers 2</div><div class="list-category">Action</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/we-become-what-we-behold.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/we-become-what-we-behold.png" class="small-thumb img-rounded lazyload" alt="We Become What We Behold"></div>
           <div class="list-info"><div class="list-title">We Become What We Behold</div><div class="list-category">Adventure</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/house-of-hazards.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/house-of-hazards.png" class="small-thumb img-rounded lazyload" alt="House Of Hazards"></div>
           <div class="list-info"><div class="list-title">House Of Hazards</div><div class="list-category">Skill</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/master-chess.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/master-chess.png" class="small-thumb img-rounded lazyload" alt="Master Chess"></div>
           <div class="list-info"><div class="list-title">Master Chess</div><div class="list-category">Thinking</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/football-legends.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/football-legends.png" class="small-thumb img-rounded lazyload" alt="Football Legends"></div>
           <div class="list-info"><div class="list-title">Football Legends</div><div class="list-category">Sports</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/rocket-soccer-derby.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/rocket-soccer-derby.png" class="small-thumb img-rounded lazyload" alt="Rocket Soccer Derby"></div>
           <div class="list-info"><div class="list-title">Rocket Soccer Derby</div><div class="list-category">Sports</div></div>
         </div></div></a>
       </div>
-
       <div class="col-lg-4 col-md-6 grid-2">
         <a href="/play/big-shot-boxing.html"><div class="game-item"><div class="list-game">
           <div class="list-thumbnail"><img src="https://sudoku-online.github.io/img/big-shot-boxing.png" class="small-thumb img-rounded lazyload" alt="Big Shot Boxing"></div>
@@ -614,11 +571,11 @@
         </div></div></a>
       </div>
 
-    </div><!-- end Popular games -->
+    </div><!-- end popular games -->
 
-    <!-- ====== AD #8: BOTTOM BANNER 970x250 ====== -->
-    <div style="text-align:center; margin: 25px 0 10px;">
-      <div id="slot-bottom-970x250" style="min-height:90px;"></div>
+    <!-- AD 8: Bottom 970x250 -->
+    <div class="ad-slot-wrap" style="text-align:center; margin:25px 0 10px;">
+      <div id="gpt-bottom-banner" style="min-height:90px; display:inline-block;"></div>
     </div>
 
   </div><!-- end container -->
