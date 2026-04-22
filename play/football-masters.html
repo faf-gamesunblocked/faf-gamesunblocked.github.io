@@ -1030,6 +1030,26 @@ googletag.cmd.push(function() {
 <script type="text/javascript" src="../js/script.js"></script>
 <!-- 	<script type="text/javascript" src="../js/custom.js"></script> -->
 
+	<script>
+window.googletag = window.googletag || {cmd: []};
+
+googletag.cmd.push(function () {
+
+  var anchorSlot = googletag.defineOutOfPageSlot(
+    '/21849154601,23300816471/Ad.Plus-Anchor',
+    googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+  );
+  if (anchorSlot) anchorSlot.addService(googletag.pubads());
+
+  googletag.enableServices();
+
+  window.addEventListener("load", function() {
+    if (anchorSlot) googletag.display(anchorSlot);
+  });
+
+});
+</script>
+
   </body>
 </html>
 
