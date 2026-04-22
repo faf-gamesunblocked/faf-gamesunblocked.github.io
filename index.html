@@ -39,146 +39,106 @@
     <meta property="og:image:height" content="630">
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Github Games",
-        "url": "https://git-hub-games.github.io/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://git-hub-games.github.io/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Github Games",
+      "url": "https://git-hub-games.github.io/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://git-hub-games.github.io/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
+    }
     </script>
     <link rel="manifest" href="https://76-games.github.io/js/manifest.json">
     <meta name="outreachist-site-verification" content="0502fb117c72fc8823f34e86f109fdd2">
 
-    <!-- ================================================
-         GPT.js — SIRF EK BAAR LOAD HOGA
-         ================================================ -->
+    <!-- ============================================================
+         GPT.js — sirf ek baar load hoga
+         ============================================================ -->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
-    <!-- ================================================
-         SAARE ADS EK HI BLOCK MEIN DEFINE — YAHI SAHI TARIKA HAI
-         ================================================ -->
     <script>
       window.googletag = window.googletag || { cmd: [] };
 
+      // HEAD mein SIRF: out-of-page slots define + display, aur display slots define karo
+      // Display slots ka display() har div ke PAAS body mein hoga — yahi sahi tarika hai
       googletag.cmd.push(function () {
 
-        // --- OUT-OF-PAGE SLOTS (body element ki zaroorat nahi) ---
-
-        // 1. Interstitial
+        // --- OUT-OF-PAGE SLOTS (inhe yahan display kar sakte hain) ---
         var interstitialSlot = googletag.defineOutOfPageSlot(
           '/21849154601,23300816471/Ad.Plus-Interstitial',
           googletag.enums.OutOfPageFormat.INTERSTITIAL
         );
-        if (interstitialSlot) interstitialSlot.addService(googletag.pubads());
+        if (interstitialSlot) {
+          interstitialSlot.addService(googletag.pubads());
+          googletag.display(interstitialSlot);
+        }
 
-        // 2. Top Anchor
         var anchorSlot = googletag.defineOutOfPageSlot(
           '/21849154601,23300816471/Ad.Plus-Anchor-Small',
           googletag.enums.OutOfPageFormat.TOP_ANCHOR
         );
-        if (anchorSlot) anchorSlot.addService(googletag.pubads());
+        if (anchorSlot) {
+          anchorSlot.addService(googletag.pubads());
+          googletag.display(anchorSlot);
+        }
 
-        // 3. Left Side Rail
         var leftRail = googletag.defineOutOfPageSlot(
           '/21849154601,23300816471/Ad.Plus-Side-Anchor',
           googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
         );
-        if (leftRail) leftRail.addService(googletag.pubads());
+        if (leftRail) {
+          leftRail.addService(googletag.pubads());
+          googletag.display(leftRail);
+        }
 
-        // 4. Right Side Rail
         var rightRail = googletag.defineOutOfPageSlot(
           '/21849154601,23300816471/Ad.Plus-Side-Anchor',
           googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
         );
-        if (rightRail) rightRail.addService(googletag.pubads());
+        if (rightRail) {
+          rightRail.addService(googletag.pubads());
+          googletag.display(rightRail);
+        }
 
-        // --- DISPLAY SLOTS (div IDs se match karte hain) ---
+        // --- DISPLAY SLOTS — sirf define karo, display() NAHI ---
+        // display() har slot ke apne div ke paas body mein call hoga
 
-        // 5. Top banner (games se pehle)
-        googletag.defineSlot(
-          '/21849154601,23300816471/Ad.Plus-970x250',
-          [[970, 250], [728, 90], [320, 50]],
-          'slot-970x250-1'
-        ).addService(googletag.pubads());
+        googletag.defineSlot('/21849154601,23300816471/Ad.Plus-970x250',
+          [[970,250],[728,90],[320,50]], 'ad-top-banner')
+          .addService(googletag.pubads());
 
-        // 6. Mid banner (games ke baad)
-        googletag.defineSlot(
-          '/21849154601,23300816471/Ad.Plus-970x250',
-          [[970, 250], [728, 90], [320, 50]],
-          'slot-970x250-2'
-        ).addService(googletag.pubads());
+        googletag.defineSlot('/21849154601,23300816471/Ad.Plus-970x250',
+          [[970,250],[728,90],[320,50]], 'ad-mid-banner')
+          .addService(googletag.pubads());
 
-        // 7. Bottom banner (content ke neeche)
-        googletag.defineSlot(
-          '/21849154601,23300816471/Ad.Plus-970x250',
-          [[970, 250], [728, 90], [320, 50]],
-          'slot-970x250-3'
-        ).addService(googletag.pubads());
+        googletag.defineSlot('/21849154601,23300816471/Ad.Plus-970x250',
+          [[970,250],[728,90],[320,50]], 'ad-bottom-banner')
+          .addService(googletag.pubads());
 
-        // 8. Grid ad #1 (games ke andar)
-        googletag.defineSlot(
-          '/21849154601,23300816471/Ad.Plus-300x250',
-          [[300, 250], [250, 250]],
-          'slot-300x250-1'
-        ).addService(googletag.pubads());
+        googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x250',
+          [[300,250],[250,250]], 'ad-grid-1')
+          .addService(googletag.pubads());
 
-        // 9. Grid ad #2 (games ke andar)
-        googletag.defineSlot(
-          '/21849154601,23300816471/Ad.Plus-300x250',
-          [[300, 250], [250, 250]],
-          'slot-300x250-2'
-        ).addService(googletag.pubads());
+        googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x250',
+          [[300,250],[250,250]], 'ad-grid-2')
+          .addService(googletag.pubads());
 
-        // 10. Content ad (text ke saath)
-        googletag.defineSlot(
-          '/21849154601,23300816471/Ad.Plus-300x250',
-          [[300, 250], [250, 250]],
-          'slot-300x250-3'
-        ).addService(googletag.pubads());
+        googletag.defineSlot('/21849154601,23300816471/Ad.Plus-300x250',
+          [[300,250],[250,250]], 'ad-content')
+          .addService(googletag.pubads());
 
-        // 11. Leaderboard (content ke beech)
-        googletag.defineSlot(
-          '/21849154601,23300816471/Ad.Plus-728x90',
-          [[728, 90], [320, 50]],
-          'slot-728x90-1'
-        ).addService(googletag.pubads());
+        googletag.defineSlot('/21849154601,23300816471/Ad.Plus-728x90',
+          [[728,90],[320,50]], 'ad-leaderboard')
+          .addService(googletag.pubads());
 
-        // --- SERVICES ENABLE (SIRF EK BAAR) ---
+        // Services ek baar enable
         googletag.pubads().enableSingleRequest();
         googletag.pubads().collapseEmptyDivs();
         googletag.enableServices();
-
-        // --- DISPLAY CALLS ---
-        if (interstitialSlot) googletag.display(interstitialSlot);
-        if (anchorSlot)       googletag.display(anchorSlot);
-        if (leftRail)         googletag.display(leftRail);
-        if (rightRail)        googletag.display(rightRail);
-
-        googletag.display('slot-970x250-1');
-        googletag.display('slot-970x250-2');
-        googletag.display('slot-970x250-3');
-        googletag.display('slot-300x250-1');
-        googletag.display('slot-300x250-2');
-        googletag.display('slot-300x250-3');
-        googletag.display('slot-728x90-1');
       });
-
-      // Anchor aur rails ko 30 sec baad refresh karo
-      setTimeout(function () {
-        googletag.cmd.push(function () {
-          var toRefresh = [];
-          // Note: anchorSlot etc. upar local hain, global mein lana hoga
-          // Isliye refresh window.gptSlots se ho ga
-          if (window.gptRefreshSlots) {
-            googletag.pubads().refresh(window.gptRefreshSlots);
-          }
-        });
-      }, 30000);
     </script>
 
     <!-- Ahrefs Analytics -->
@@ -186,49 +146,58 @@
 
     <!-- WG Player -->
     <link rel="dns-prefetch" href="https://universal.wgplayer.com"/>
-    <script type="text/javascript" async>
-      !function(e,t){a=e.createElement("script"),m=e.getElementsByTagName("script")[0],a.async=1,a.src=t,a.fetchPriority='high',m.parentNode.insertBefore(a,m)}(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);
-    </script>
+    <script type="text/javascript" async>!function(e,t){a=e.createElement("script"),m=e.getElementsByTagName("script")[0],a.async=1,a.src=t,a.fetchPriority='high',m.parentNode.insertBefore(a,m)}(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);</script>
+
+    <!-- InPage Video player -->
+    <script async src="https://cdn.ad.plus/player/adplus.js"></script>
 
   </head>
 
-  <body id="page-top" style="background-color: #666666; background-size: cover;">
+  <body id="page-top" style="background-color:#666666; background-size:cover;">
 
     <!-- Navbar -->
     <div id="header-container"></div>
     <script>
       fetch("/header.html")
-        .then(r => r.text()).then(d => { document.getElementById("header-container").innerHTML = d; })
+        .then(r => r.text())
+        .then(d => { document.getElementById("header-container").innerHTML = d; })
         .catch(e => console.error("Error loading header:", e));
     </script>
 
     <div class="container game-wrapper">
+
+      <!-- ============================================================
+           AD #1 — TOP BANNER
+           div pehle, phir display() — yahi sahi order hai
+           ============================================================ -->
+      <div style="text-align:center; margin:10px 0 15px;">
+        <div id="ad-top-banner" style="min-height:50px;"></div>
+        <script>
+          googletag.cmd.push(function(){ googletag.display('ad-top-banner'); });
+        </script>
+      </div>
+
       <div class="row">
-
-        <!-- ====== AD #1: TOP BANNER 970x250 ====== -->
-        <div style="width:100%; text-align:center; margin-bottom:15px;">
-          <div id="slot-970x250-1" style="min-height:90px;"></div>
-        </div>
-
         <div class="text-center">
-          <h1 style="font-size: 30px; font-weight: bold; color: #ffd369;">Unblocked Github Games – Play Anytime, Anywhere!</h1>
-          <p style="font-size: 14px">
+          <h1 style="font-size:30px; font-weight:bold; color:#ffd369;">Unblocked Github Games – Play Anytime, Anywhere!</h1>
+          <p style="font-size:14px">
             Welcome to GG (Github Games), your best spot for <a href="https://git-hub-games.github.io/">Unblocked Games premium</a>! Dive into a massive collection of free, fun games that work perfectly at school, the office, or anywhere else. No downloads, just pure gaming enjoyment. From thrilling action adventures and brain-teasing puzzles to classic arcade hits, we've got it all. Start playing now and turn any downtime into game time! 🎮 <a href="#">Browse All Games</a>
           </p>
         </div>
       </div>
 
-      <!-- ====== AD #2: INPAGE VIDEO / OUTSTREAM ====== -->
-      <div style="text-align:center; margin: 10px 0 20px;">
-        <script async src="https://cdn.ad.plus/player/adplus.js"></script>
+      <!-- ============================================================
+           AD #2 — INPAGE VIDEO / OUTSTREAM
+           ============================================================ -->
+      <div style="text-align:center; margin:10px 0 20px;">
         <script data-playerPro="current">
           (function(){
-            var s=document.querySelector('script[data-playerPro="current"]');
+            var s = document.querySelector('script[data-playerPro="current"]');
             s.removeAttribute("data-playerPro");
-            (playerPro=window.playerPro||[]).push({
-              id:"z2I717k6zq5b",
-              after:s,
-              appParams:{"C_NETWORK_CODE":"23300816471","C_WEBSITE":"git-hub-games.github.io"}
+            (playerPro = window.playerPro || []).push({
+              id: "z2I717k6zq5b",
+              after: s,
+              appParams: { "C_NETWORK_CODE": "23300816471", "C_WEBSITE": "git-hub-games.github.io" }
             });
           })();
         </script>
@@ -239,6 +208,7 @@
 
       <div class="row grid-container">
 
+        <!-- Games 1-6 -->
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/football-masters">
             <div class="game-item"><div class="list-game">
@@ -293,11 +263,20 @@
           </a>
         </div>
 
-        <!-- ====== AD #3: GRID AD 300x250 (games ke beech) ====== -->
-        <div class="col-lg-2 col-md-4 col-6 grid-3" style="display:flex;align-items:center;justify-content:center;padding:5px;">
-          <div id="slot-300x250-1" style="min-height:250px; min-width:300px;"></div>
+        <!-- ============================================================
+             AD #3 — GRID AD 300x250 (7th position, games ke beech)
+             div pehle, phir uske neeche display()
+             ============================================================ -->
+        <div class="col-lg-2 col-md-4 col-6 grid-3" style="display:flex;align-items:center;justify-content:center;">
+          <div>
+            <div id="ad-grid-1" style="min-height:250px; min-width:250px;"></div>
+            <script>
+              googletag.cmd.push(function(){ googletag.display('ad-grid-1'); });
+            </script>
+          </div>
         </div>
 
+        <!-- Games 7-12 -->
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/gold-digger-frvr">
             <div class="game-item"><div class="list-game">
@@ -340,11 +319,6 @@
           </a>
         </div>
 
-        <!-- ====== AD #4: GRID AD 300x250 (second) ====== -->
-        <div class="col-lg-2 col-md-4 col-6 grid-3" style="display:flex;align-items:center;justify-content:center;padding:5px;">
-          <div id="slot-300x250-2" style="min-height:250px; min-width:300px;"></div>
-        </div>
-
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/moto-road-rash-3d.html">
             <div class="game-item"><div class="list-game">
@@ -353,6 +327,19 @@
           </a>
         </div>
 
+        <!-- ============================================================
+             AD #4 — GRID AD 300x250 (14th position)
+             ============================================================ -->
+        <div class="col-lg-2 col-md-4 col-6 grid-3" style="display:flex;align-items:center;justify-content:center;">
+          <div>
+            <div id="ad-grid-2" style="min-height:250px; min-width:250px;"></div>
+            <script>
+              googletag.cmd.push(function(){ googletag.display('ad-grid-2'); });
+            </script>
+          </div>
+        </div>
+
+        <!-- Games 13-22 -->
         <div class="col-lg-2 col-md-4 col-6 grid-3">
           <a href="/play/water-color-sort.html">
             <div class="game-item"><div class="list-game">
@@ -443,12 +430,17 @@
 
       </div><!-- end grid-container -->
 
-      <!-- ====== AD #5: POST-GAMES BANNER 970x250 ====== -->
-      <div style="text-align:center; margin: 20px 0;">
-        <div id="slot-970x250-2" style="min-height:90px;"></div>
+      <!-- ============================================================
+           AD #5 — MID BANNER (games ke baad, content se pehle)
+           ============================================================ -->
+      <div style="text-align:center; margin:20px 0;">
+        <div id="ad-mid-banner" style="min-height:50px;"></div>
+        <script>
+          googletag.cmd.push(function(){ googletag.display('ad-mid-banner'); });
+        </script>
       </div>
 
-      <!-- ===== CONTENT ===== -->
+      <!-- SEO Content -->
       <h2>Unblocked Games Github – Play Free Games at School &amp; Work!</h2>
       <p class="intro">
         Looking for <strong>unblocked games</strong> that you can enjoy at school, work, or anywhere without limitations?
@@ -462,9 +454,14 @@
         our site delivers smooth, lag-free gameplay without any annoying restrictions.
       </p>
 
-      <!-- ====== AD #6: LEADERBOARD 728x90 (content ke beech) ====== -->
-      <div style="text-align:center; margin: 20px 0;">
-        <div id="slot-728x90-1" style="min-height:50px;"></div>
+      <!-- ============================================================
+           AD #6 — LEADERBOARD 728x90 (paragraphs ke beech)
+           ============================================================ -->
+      <div style="text-align:center; margin:20px 0;">
+        <div id="ad-leaderboard" style="min-height:50px;"></div>
+        <script>
+          googletag.cmd.push(function(){ googletag.display('ad-leaderboard'); });
+        </script>
       </div>
 
       <section>
@@ -477,10 +474,17 @@
 
         <div class="feature-box" style="overflow:hidden;">
           <h3>No Downloads – Just Click &amp; Play!</h3>
-          <!-- ====== AD #7: CONTENT AD 300x250 (text ke saath float) ====== -->
-          <div style="float:right; margin: 0 0 10px 20px;">
-            <div id="slot-300x250-3" style="min-height:250px; min-width:300px;"></div>
+
+          <!-- ============================================================
+               AD #7 — CONTENT AD 300x250 (text ke saath right float)
+               ============================================================ -->
+          <div style="float:right; margin:0 0 15px 20px;">
+            <div id="ad-content" style="min-height:250px; min-width:300px;"></div>
+            <script>
+              googletag.cmd.push(function(){ googletag.display('ad-content'); });
+            </script>
           </div>
+
           <ul>
             <li><strong>School/Work Friendly</strong> – Effortlessly bypass network blocks.</li>
             <li><strong>Mobile &amp; PC Compatible</strong> – Enjoy gaming on smartphones, tablets, laptops, or desktops.</li>
@@ -490,7 +494,7 @@
 
         <div class="feature-box">
           <h3>Huge Collection of Games</h3>
-          <p>Whether you love <strong>action games</strong> or <strong>puzzle challenges</strong>, <strong>Github Games (GG)</strong> has you covered. We update our library regularly.</p>
+          <p>Whether you love <strong>action games</strong> or <strong>puzzle challenges</strong>, <strong>Github Games (GG)</strong> has you covered. We update our library regularly, ensuring you always find the latest and most exciting <strong>Unblocked Games Github</strong>.</p>
         </div>
 
         <div class="feature-box">
@@ -503,16 +507,22 @@
         <h2>Why Github Games is Better Than Other Unblocked Game Sites?</h2>
         <table>
           <tr><th>Feature</th><th>Github Games</th><th>Other Sites</th></tr>
-          <tr style="color:#CFCFCF;"><td>No Ads</td><td class="checkmark">✅ Yes</td><td class="x-mark">❌ Often filled with pop-ups</td></tr>
-          <tr style="color:#CFCFCF;"><td>No Downloads</td><td class="checkmark">✅ Play instantly</td><td class="x-mark">❌ Some require installs</td></tr>
-          <tr style="color:#CFCFCF;"><td>Works at School/Work</td><td class="checkmark">✅ Unblocked</td><td class="x-mark">❌ Often restricted</td></tr>
-          <tr style="color:#CFCFCF;"><td>Huge Game Selection</td><td class="checkmark">✅ 100+ games</td><td class="x-mark">❌ Limited choices</td></tr>
+          <tr style="color:#CFCFCF;"><td>No Downloads</td><td class="checkmark">&#10003; Play instantly</td><td class="x-mark">&#10007; Some require installs</td></tr>
+          <tr style="color:#CFCFCF;"><td>Works at School/Work</td><td class="checkmark">&#10003; Unblocked</td><td class="x-mark">&#10007; Often restricted</td></tr>
+          <tr style="color:#CFCFCF;"><td>Huge Game Selection</td><td class="checkmark">&#10003; 100+ games</td><td class="x-mark">&#10007; Limited choices</td></tr>
         </table>
       </section>
 
-      <!-- ====== AD #8: BOTTOM BANNER 970x250 ====== -->
-      <div style="text-align:center; margin: 30px 0 10px;">
-        <div id="slot-970x250-3" style="min-height:90px;"></div>
+      <div style="clear:both;"></div>
+
+      <!-- ============================================================
+           AD #8 — BOTTOM BANNER (page ke bilkul neeche)
+           ============================================================ -->
+      <div style="text-align:center; margin:30px 0 10px;">
+        <div id="ad-bottom-banner" style="min-height:50px;"></div>
+        <script>
+          googletag.cmd.push(function(){ googletag.display('ad-bottom-banner'); });
+        </script>
       </div>
 
     </div><!-- end container -->
@@ -521,7 +531,8 @@
     <div id="footer-container"></div>
     <script>
       fetch("/footer.html")
-        .then(r => r.text()).then(d => { document.getElementById("footer-container").innerHTML = d; })
+        .then(r => r.text())
+        .then(d => { document.getElementById("footer-container").innerHTML = d; })
         .catch(e => console.error("Error loading footer:", e));
     </script>
 
