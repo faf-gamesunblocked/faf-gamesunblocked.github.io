@@ -131,8 +131,9 @@ googletag.cmd.push(function () {
   if (anchorSlot) anchorSlot.addService(googletag.pubads());
 
   googletag.pubads().enableSingleRequest();
-  googletag.enableServices();
+googletag.enableServices();
 
+window.addEventListener("load", function() {
   if (interstitialSlot) googletag.display(interstitialSlot);
   if (anchorSlot) googletag.display(anchorSlot);
 });
